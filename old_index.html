@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" target="_blank" />
+    
+    <title>Using JQuery</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="frontend/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+$(document).ready(function() { 
+    //Make body Blue
+    $('#bodyBlue').click(
+        function() { 
+            $(document.body).css({'background-color': 'blue', color: 'white'});
+        });
+    
+    //Make body Red
+    $('#bodyRed').click( 
+        function() {
+            $(document.body).css({'background-color': 'red',color: 'black'});
+        });
+    
+    //Make body Yellow
+    $('#bodyYellow').click( 
+        function() { 
+            $(document.body).css({'background-color': 'yellow', color: 'black'});
+        });
+    
+    //Make body Normal
+    $('#bodyNormal').click(
+        function() { 
+            $(document.body).css({'background-color': 'white', color: 'black'});
+        }); 
+    
+    //Toggle family Table
+    $('.tableHide').click(
+        function() { 
+            $('.tableHide').text(function(i, text) {
+                return text === "Hide Table" ? "Show Table" : "Hide Table";
+            });
+            $('.family-table').toggle();
+        }); 
+});//END JQuery
+</script>
+    
+    <style>
+        table, td {
+            border: 1px solid red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>h1 header</h1>
+    <h2>h2 header</h2>
+    <h3>h3 header</h3>
+    <h4>h4 header</h4>
+    <h5>h5 header</h5>
+    <h6>h6 header</h6>
+    
+    <p>This is a paragraph</p>
+    
+    <a href="https://xologic.com">This is a link to my companies website</a>
+    
+    <p>This is an image tag wrapped in an 'a' tag to create a linked image that will take you to a new tab:    <a href="https://youtube.com" target="_blank"><img style="height: 25px; width: 25px;" src="images/youtube.ico" /></a></p>
+    
+    <ul>
+        <li>First ul item</li>
+        <li>Second ul item</li>
+        <li>Third ul item</li>
+    </ul>
+
+    <ol>
+        <li>First ol item</li>
+        <li>Second ol item</li>
+        <li>Third ol item</li>
+    </ol>
+
+    <p>There is a comment here -><!--Comment--><- and you cannot see it.</p>
+
+    <abbr>This is an abbreviation</abbr>
+
+    <p>Below is an address tag:<address>987 Harvester Lane <br>Orem, UT<br> 84057</address></p>
+            
+    <article>
+    <h3>h3 element of the article</h3>
+        <a href="https://facebook.com" target="_blank"><img style="height: 25px; width: 25px;" src="images/facebook.ico"/></a>
+        <p>Above is an image tag for an article. This a paragraph tag for the article.</p>
+    </article>
+            
+    <aside>
+        <h3>h3 tag in the aside tag</h3>
+        <p>Paragraph inside of the Aside tag</p>
+    </aside>
+    
+    <audio controls>
+        <source src="Audio/Fall%20Out%20Boy%20-%20Centuries.mp3" type="audio/mpeg">
+        This only shows if your browser doesn't support the audio element. 
+    </audio>
+    
+    <p>Here we have a normal 'p' tag with a <b>bold</b> element inside</p>
+    
+    <blockquote cite="http://www.apple.com">This is what it looks like inside a 'blockquote' tag. Not sure how useful this could be, but if I was writing for a news site and doing other profesh things, I would enjoy this quite much. I need to make this longer for a better effect. What does lorem ipsum mean? I see it everwhere in programming, but I am not sure what it means! Uggh..
+    </blockquote>
+    
+    <p>
+        This<br />is<br />what<br />the<br />'br'<br />or<br />break<br />tag<br />does
+    </p>
+    
+    <p>Click a button below to change the page color!</p>
+    <button id="bodyBlue" type="button">Blue</button>
+    <button id="bodyRed" type="button">Red</button>
+    <button id="bodyYellow" type="button">Yellow</button>
+    <button id="bodyNormal" type="button">Reset</button><br />
+    
+    <table class="family-table">
+        <caption><b>My Family</caption>
+        <colgroup>
+            <col span="2" style="background-color:red">
+            <col span="2" style="background-color:yellow">
+        </colgroup>
+        <tr>
+            <td><b>Name:</b></td>
+            <td><em >Tyler</em   ></td>
+            <td><em >Ashley</em  ></td>
+            <td><em >Lyla</em    ></td>
+        </tr>
+        <tr>
+            <td><b>Gender:</b></td>
+            <td>Male</td>
+            <td>Female</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td><b>Birthday:</b></td>
+            <td>July 5th, 1995</td>
+            <td>March 26th, 1996</td>
+            <td>July 23rd, 2015</td>
+        </tr>
+    </table>
+    <button class="tableHide" type="button">Hide Table</button>
+    
+        <p><cite>Harry Potter and The Sorcerers Stone</cite> by J.K. Rowling.</p>
+        <p>Below is a piece of code written in c++</p>
+        <code>
+        int main()<br>
+        {<br>   
+            cout << "Hello World";<br>
+            return 0;<br>
+        }
+        </code>
+        
+        <p>This is how you delete things -> <del>blue</del> and insert things -> <ins>red</ins>!</p>
+        
+        <details>
+  <summary>Click Arrow to see hidden content</summary>
+  <p> Hidden Content</p>
+  <p>This is an example of a hidden content in a details tag. This is useful to hide content that is not necesary, but a user can access it if needed. </p>
+</details>
+
+<p><b>Note:</b> The details tag is currently only supported in Opera, Chrome, and in Safari 6.</p>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
