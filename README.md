@@ -1,2 +1,4 @@
 # material-resume
-Material Design Resume 
+Hi! 
+
+This is a Material Design Resume Built with modern web technologies. 
