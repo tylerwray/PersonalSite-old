@@ -1,0 +1,12 @@
+
+* {
+    font-family: 'Open Sans', Tahoma, serif;
+}
+header {
+    background-color: #F44336;
+    padding: 10px;
+}
+
+#contact {
+    color: white;
+}
