@@ -1,21 +1,42 @@
 
 * {
     font-family: 'Open Sans', Tahoma, serif;
-    color: white;
+
 }
 header {
     background-color: #F44336;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 #info, #contact{
     float: right;
+    color: white;
 }
+
+
 
 #nav {
     list-style-type: none;
 }
 
-.fa-bars {
+#nav-btn {
     float: left;
+    color: white;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+#nav-btn:hover {
+    color: #FFCDD2;
+}
+
+#name {
+    font-size: 24px;
+    color: white;
+}
+
+article {
+    max-width: 600px;
+    margin: auto;
 }
