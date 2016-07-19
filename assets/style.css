@@ -47,12 +47,15 @@ article {
     height: 56px;
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 10px;
     bottom: 10px;
     background-color: #F44336;
     transition: all 500ms ease;
+}
+
+#fab.closed {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #fab.closed > i {
     animation-name: rotate-a;
@@ -79,6 +82,7 @@ article {
 #fab.open {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
+
 #fab.open > i {
     animation-name: rotate-x;
     animation-duration: 500ms;
