@@ -51,12 +51,9 @@ article {
     right: 10px;
     bottom: 10px;
     background-color: #F44336;
-    transition: all 500ms ease;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
-#fab.closed {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-}
 #fab.closed > i {
     animation-name: rotate-a;
     animation-duration: 500ms;
@@ -73,14 +70,20 @@ article {
     to { transform: rotateZ(0deg); }
 }
 
+@keyframes fab-action {
+    from {}
+    to {}
+}
+
 #fab:hover {
     cursor: pointer;
     transition: all 500ms ease;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 #fab.open {
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: all 800ms ease;
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4), 0px -70px 0px -5px #43A047, 0px -65px 5px -5px rgba(0, 0, 0, 0.4), 0px -140px 0px -5px #2196F3, 0px -135px 5px -5px rgba(0, 0, 0, 0.4), 0px 0px 0px 100000px rgba(255, 255, 255, 0.8);
 }
 
 #fab.open > i {
