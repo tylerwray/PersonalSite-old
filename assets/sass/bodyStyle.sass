@@ -1,0 +1,132 @@
+body
+    overflow-x: hidden
+    padding-top: 80px
+
+#icn-main, #icn-1, #icn-2, #icn-last
+    color: white
+    font-size: 36px
+
+article
+    padding: 20px
+    padding-top: 5px
+
+#fab
+    cursor: pointer
+    width: 56px
+    height: 56px
+    padding: 10px
+    border-radius: 50%
+    position: fixed
+    right: 10px
+    bottom: 10px
+    background-color: $primary
+    transition: all 300ms ease-in-out
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5)
+
+#fab.closed > i
+    animation-name: rotate-a
+    animation-duration: 500ms
+    animation-fill-mode: forwards
+
+@keyframes rotate-x
+    0%
+        transform: rotateZ(0deg)
+    100%
+        transform: rotateZ(135deg)
+
+@keyframes rotate-a
+    0%
+        transform: rotateZ(135deg)
+    100%
+        transform: rotateZ(0deg)
+
+#fab:focus
+    cursor: pointer
+    transition: all 500ms ease-in-out
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
+
+/*#fab:click
+    cursor: pointer
+    transition: all 500ms ease
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)*/
+
+#fab.open
+    transition: all 500ms ease-in-out
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
+
+#fab.open > :first-child
+    animation-name: rotate-x
+    animation-duration: 500ms
+    animation-fill-mode: forwards
+
+#fab-1
+    width: 46px
+    height: 46px
+    position: fixed
+    right: 16px
+    bottom: 10px
+    border-radius: 50%
+    background-color: $first
+    box-shadow: 0px 3px 10px 0px $shadow
+    transition: all 200ms ease-in-out
+    transition-delay: .1s
+    opacity: 0
+
+    &.closed
+        transition: all 200ms ease-in-out
+        transition-delay: 0s
+        bottom: 10px
+
+    & > :first-child
+        padding: 11px
+        font-size: 24px
+
+    &.open
+        cursor: pointer
+        transition: all 200ms ease-in-out
+        width: 46px
+        height: 46px
+        bottom: 85px
+        opacity: 1
+        box-shadow: 0px 3px 10px 0px $shadow
+
+#fab-2
+    @extend #fab-1
+    background-color: $second
+    bottom: 10px
+    transition: all 200ms ease-in-out
+    transition-delay: .05s
+
+
+    &.closed
+        bottom: 10px
+        transition: all 200ms ease-in-out
+        transition-delay: .05s
+
+    &.open
+        bottom: 150px
+        box-shadow: 0px 3px 10px 0px $shadow
+
+#fab-3
+    @extend #fab-1
+    bottom: 10px
+    background-color: $third
+    transition: all 200ms ease-in-out
+    transition-delay: 0s
+
+    &.closed
+        transition: all 200ms ease-in-out
+        transition-delay: .1s
+        bottom: 10px
+
+    &.open
+        bottom: 215px
+        box-shadow: 0px 3px 10px 0px $shadow, 0px 0px 0 10000px rgba(255, 255, 255, 0.82)
+
+#lbl-1.closed
+    color: black
+    font-size: 16px
+    font-weight: normal
+    display: none
+
+    &.open
