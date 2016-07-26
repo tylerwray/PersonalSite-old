@@ -68,13 +68,13 @@ article
     border-radius: 50%
     background-color: $first
     box-shadow: 0px 3px 10px 0px $shadow
-    transition: all 200ms ease-in-out
-    transition-delay: .1s
+    transition: $standard-transition
+    transition-delay: 0s
     opacity: 0
 
     &.closed
-        transition: all 200ms ease-in-out
-        transition-delay: 0s
+        transition: $standard-transition
+        transition-delay: .1s
         bottom: 10px
 
     & > :first-child
@@ -83,7 +83,7 @@ article
 
     &.open
         cursor: pointer
-        transition: all 200ms ease-in-out
+        transition: $standard-transition
         width: 46px
         height: 46px
         bottom: 85px
@@ -94,13 +94,13 @@ article
     @extend #fab-1
     background-color: $second
     bottom: 10px
-    transition: all 200ms ease-in-out
+    transition: $standard-transition
     transition-delay: .05s
 
 
     &.closed
         bottom: 10px
-        transition: all 200ms ease-in-out
+        transition: $standard-transition
         transition-delay: .05s
 
     &.open
@@ -108,25 +108,62 @@ article
         box-shadow: 0px 3px 10px 0px $shadow
 
 #fab-3
-    @extend #fab-1
+    @extend #fab-2
     bottom: 10px
     background-color: $third
-    transition: all 200ms ease-in-out
-    transition-delay: 0s
+    transition: $standard-transition
+    transition-delay: .1s
 
     &.closed
-        transition: all 200ms ease-in-out
-        transition-delay: .1s
+        transition: $standard-transition
+        transition-delay: 0s
         bottom: 10px
 
     &.open
         bottom: 215px
-        box-shadow: 0px 3px 10px 0px $shadow, 0px 0px 0 10000px rgba(255, 255, 255, 0.82)
-
-#lbl-1.closed
+        box-shadow: 0px 3px 10px 0px $shadow
+#lbl-1
+    position: fixed
+    right: 80px
+    bottom: 10px
+    opacity: 0
     color: black
-    font-size: 16px
+    font-size: 14px
     font-weight: normal
-    display: none
+    transition: $standard-transition
+    transition-delay: 0s
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
+    border: 0.5px solid rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    background-color: white
+    padding: 4px
+
+    &.closed
+        transition-delay: .1s
 
     &.open
+        opacity: 1
+        transition: $standard-transition
+        right: 80px
+        bottom: 90px
+
+#lbl-2
+    @extend #lbl-1
+    transition-delay: .05s
+
+    &.closed
+        transition-delay: .05s
+
+    &.open
+        bottom: 155px
+
+#lbl-3
+    @extend #lbl-2
+    transition-delay: .1s
+
+    &.closed
+        transition-delay: 0s
+
+    &.open
+        bottom: 220px
+        box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6), 0px 0px 0 10000px rgba(255, 255, 255, 0.82)

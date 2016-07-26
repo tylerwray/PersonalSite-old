@@ -5,6 +5,22 @@
 #menu
     color: white
     font-size: 45px
+    padding-top: 5px
 
     &:hover
         cursor: pointer
+
+#side-nav
+    margin-left: -250px
+    display: block
+    height: 100%
+    width: 200px
+    background-color: black
+    transition: $standard-transition
+
+    &.open
+        transition: $standard-transition
+        margin-left: 0px
+
+    & > ul > li
+        color: white

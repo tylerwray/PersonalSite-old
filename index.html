@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scaleable=no" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/stylesheet.css">
     <meta title="Tyler Wray" />
@@ -13,12 +13,19 @@
 
 <body>
     <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-
+        <div id="menu-btn" class="container-fluid">
             <i id="menu" class="material-icons">menu</i>
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div id="side-nav" class="closed">
+        <ul>
+            <li>Tyler</li>
+            <li>Ashley</li>
+            <li>Lyla</li>
+
+        </ul>
+    </div>
     <div class="container">
         <div class="jumbotron">
             <article>
@@ -86,20 +93,25 @@
             </article>
         </div>
     </div>
-
-    <label id="lbl-3">More Info</label>
-    <div id="fab-3" class="">
-        <i id="icn-last" class="material-icons">info_outline</i>
+    <div class="fab-holder">
+        <label for="fab-3" id="lbl-3" class="closed">More Info</label>
+        <div id="fab-3" class="closed">
+            <i id="icn-last" class="material-icons">info_outline</i>
+        </div>
     </div>
 
-    <label id="lbl-2">Profile</label>
-    <div id="fab-2" class="">
-        <i id="icn-2" class="material-icons">account_circle</i>
+    <div class="fab-holder">
+        <label for="fab-2" id="lbl-2" class="closed">Profile</label>
+        <div id="fab-2" class="closed">
+            <i id="icn-2" class="material-icons">account_circle</i>
+        </div>
     </div>
 
-    <label id="lbl-1">E-Mail Me</label>
-    <div id="fab-1" class="">
-        <i id="icn-1" class="material-icons">mail</i>
+    <div class="fab-holder">
+        <label for="fab-1" id="lbl-1" class="closed">E-Mail Me</label>
+        <div id="fab-1" class="closed">
+            <i id="icn-1" class="material-icons">mail</i>
+        </div>
     </div>
 
     <div id="fab" class="closed">
@@ -120,6 +132,15 @@
                 $('#fab-3').toggleClass('closed');
                 $('#lbl-1').toggleClass('open');
                 $('#lbl-1').toggleClass('closed');
+                $('#lbl-2').toggleClass('open');
+                $('#lbl-2').toggleClass('closed');
+                $('#lbl-3').toggleClass('open');
+                $('#lbl-3').toggleClass('closed');
+            });
+
+            $('#menu-btn').click(function() {
+                $('#side-nav').toggleClass('open');
+                $('#side-nav').toggleClass('closed');
             });
         });
     </script>

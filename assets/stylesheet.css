@@ -69,14 +69,14 @@ article {
   right: 16px;
   bottom: 10px;
   border-radius: 50%;
-  background-color: #FFD600;
+  background-color: #2196F3;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
   transition: all 200ms ease-in-out;
-  transition-delay: 0.1s;
+  transition-delay: 0s;
   opacity: 0; }
   #fab-1.closed, .closed#fab-2, .closed#fab-3 {
     transition: all 200ms ease-in-out;
-    transition-delay: 0s;
+    transition-delay: 0.1s;
     bottom: 10px; }
   #fab-1 > :first-child, #fab-2 > :first-child, #fab-3 > :first-child {
     padding: 11px;
@@ -90,16 +90,16 @@ article {
     opacity: 1;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
 
-#fab-2 {
+#fab-2, #fab-3 {
   background-color: #43A047;
   bottom: 10px;
   transition: all 200ms ease-in-out;
   transition-delay: 0.05s; }
-  #fab-2.closed {
+  #fab-2.closed, .closed#fab-3 {
     bottom: 10px;
     transition: all 200ms ease-in-out;
     transition-delay: 0.05s; }
-  #fab-2.open {
+  #fab-2.open, .open#fab-3 {
     bottom: 150px;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
 
@@ -107,20 +107,52 @@ article {
   bottom: 10px;
   background-color: #AB47BC;
   transition: all 200ms ease-in-out;
-  transition-delay: 0s; }
+  transition-delay: 0.1s; }
   #fab-3.closed {
     transition: all 200ms ease-in-out;
-    transition-delay: 0.1s;
+    transition-delay: 0s;
     bottom: 10px; }
   #fab-3.open {
     bottom: 215px;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4), 0px 0px 0 10000px rgba(255, 255, 255, 0.82); }
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
 
-#lbl-1.closed {
+#lbl-1, #lbl-2, #lbl-3 {
+  position: fixed;
+  right: 80px;
+  bottom: 10px;
+  opacity: 0;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
-  display: none; }
+  transition: all 200ms ease-in-out;
+  transition-delay: 0s;
+  box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6);
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  padding: 4px; }
+  #lbl-1.closed, .closed#lbl-2, .closed#lbl-3 {
+    transition-delay: 0.1s; }
+  #lbl-1.open, .open#lbl-2, .open#lbl-3 {
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+    right: 80px;
+    bottom: 90px; }
+
+#lbl-2, #lbl-3 {
+  transition-delay: 0.05s; }
+  #lbl-2.closed, .closed#lbl-3 {
+    transition-delay: 0.05s; }
+  #lbl-2.open, .open#lbl-3 {
+    bottom: 155px; }
+
+#lbl-3 {
+  transition-delay: 0.1s; }
+  #lbl-3.closed {
+    transition-delay: 0s; }
+  #lbl-3.open {
+    bottom: 220px;
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6), 0px 0px 0 10000px rgba(255, 255, 255, 0.82); }
 
 .navbar {
   border-radius: 0px;
@@ -128,8 +160,22 @@ article {
 
 #menu {
   color: white;
-  font-size: 45px; }
+  font-size: 45px;
+  padding-top: 5px; }
   #menu:hover {
     cursor: pointer; }
+
+#side-nav {
+  margin-left: -250px;
+  display: block;
+  height: 100%;
+  width: 200px;
+  background-color: black;
+  transition: all 200ms ease-in-out; }
+  #side-nav.open {
+    transition: all 200ms ease-in-out;
+    margin-left: 0px; }
+  #side-nav > ul > li {
+    color: white; }
 
 /*# sourceMappingURL=stylesheet.css.map */
