@@ -1,8 +1,9 @@
 .navbar
     border-radius: 0px
     background-color: $primary
+    z-index: $lowest + 1
 
-#menu
+#menu-btn i
     color: white
     font-size: 45px
     padding-top: 5px
@@ -10,12 +11,22 @@
     &:hover
         cursor: pointer
 
+#name
+    font-size: 30px
+    color: white
+    height: 100%
+
+    @media screen and (max-width: 480px)
+        display: none
+
 #side-nav
     margin-left: -250px
     display: block
     height: 100%
     width: 200px
-    background-color: black
+    background-color: white
+    position: fixed
+    z-index: $highest
     transition: $standard-transition
 
     &.open
@@ -23,4 +34,5 @@
         margin-left: 0px
 
     & > ul > li
-        color: white
+        color: black
+        list-style-type: none

@@ -4,9 +4,22 @@
 button {
   color: #F44336; }
 
+.disabled {
+  background-color: rgba(0, 0, 0, 0.3); }
+
 body {
+  padding-top: 56px;
+  overflow: auto; }
+
+.main-content {
   overflow-x: hidden;
-  padding-top: 80px; }
+  padding-top: 40px;
+  position: relative;
+  z-index: 0; }
+
+.fab-main,
+.fab-holder {
+  z-index: 5; }
 
 #icn-main, #icn-1, #icn-2, #icn-last {
   color: white;
@@ -25,6 +38,7 @@ article {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  z-index: 5;
   background-color: #F44336;
   transition: all 300ms ease-in-out;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
@@ -70,9 +84,10 @@ article {
   bottom: 10px;
   border-radius: 50%;
   background-color: #2196F3;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease-in-out;
   transition-delay: 0s;
+  z-index: 5;
   opacity: 0; }
   #fab-1.closed, .closed#fab-2, .closed#fab-3 {
     transition: all 200ms ease-in-out;
@@ -88,37 +103,33 @@ article {
     height: 46px;
     bottom: 85px;
     opacity: 1;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
 
 #fab-2, #fab-3 {
   background-color: #43A047;
   bottom: 10px;
-  transition: all 200ms ease-in-out;
   transition-delay: 0.05s; }
   #fab-2.closed, .closed#fab-3 {
     bottom: 10px;
-    transition: all 200ms ease-in-out;
     transition-delay: 0.05s; }
   #fab-2.open, .open#fab-3 {
     bottom: 150px;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
 
 #fab-3 {
   bottom: 10px;
   background-color: #AB47BC;
-  transition: all 200ms ease-in-out;
   transition-delay: 0.1s; }
   #fab-3.closed {
-    transition: all 200ms ease-in-out;
     transition-delay: 0s;
     bottom: 10px; }
   #fab-3.open {
     bottom: 215px;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
 
 #lbl-1, #lbl-2, #lbl-3 {
   position: fixed;
-  right: 80px;
+  right: 0px;
   bottom: 10px;
   opacity: 0;
   color: black;
@@ -130,12 +141,12 @@ article {
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: white;
+  z-index: 5;
   padding: 4px; }
   #lbl-1.closed, .closed#lbl-2, .closed#lbl-3 {
     transition-delay: 0.1s; }
   #lbl-1.open, .open#lbl-2, .open#lbl-3 {
     opacity: 1;
-    transition: all 200ms ease-in-out;
     right: 80px;
     bottom: 90px; }
 
@@ -152,30 +163,66 @@ article {
     transition-delay: 0s; }
   #lbl-3.open {
     bottom: 220px;
-    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6), 0px 0px 0 10000px rgba(255, 255, 255, 0.82); }
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6); }
+
+#overlay.open, .open#overlay-fab {
+  transition: all 500ms ease-in-out;
+  position: fixed;
+  right: 10px;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-right: -20px;
+  z-index: 6; }
+  body #overlay.open, body .open#overlay-fab {
+    overflow: hidden; }
+
+#overlay.closed, .closed#overlay-fab.open {
+  transition: all 500ms ease-in-out; }
+
+#overlay:clicked, #overlay-fab.open:clicked {
+  transition: all 500ms ease-in-out; }
+
+#overlay-fab.open {
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.82);
+  margin-right: -10px;
+  transition: all 500ms ease-in-out; }
 
 .navbar {
   border-radius: 0px;
-  background-color: #F44336; }
+  background-color: #F44336;
+  z-index: 1; }
 
-#menu {
+#menu-btn i {
   color: white;
   font-size: 45px;
   padding-top: 5px; }
-  #menu:hover {
+  #menu-btn i:hover {
     cursor: pointer; }
+
+#name {
+  font-size: 30px;
+  color: white;
+  height: 100%; }
+  @media screen and (max-width: 480px) {
+    #name {
+      display: none; } }
 
 #side-nav {
   margin-left: -250px;
   display: block;
   height: 100%;
   width: 200px;
-  background-color: black;
-  transition: all 200ms ease-in-out; }
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  transition: all 500ms ease-in-out; }
   #side-nav.open {
-    transition: all 200ms ease-in-out;
+    transition: all 500ms ease-in-out;
     margin-left: 0px; }
   #side-nav > ul > li {
-    color: white; }
+    color: black;
+    list-style-type: none; }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -1,11 +1,21 @@
+// Main colors of site
 $primary: #F44336
 $secondary: #2196F3
+
+// Fab colors & order
 $first: #2196F3
 $second: #43A047
 $third: #AB47BC
-$standard-transition: all 200ms ease-in-out
 
-$shadow: rgba(0, 0, 0, 0.4)
+// CSS standard function sets
+$standard-transition: all 500ms ease-in-out
+$fast-transition: all 200ms ease-in-out
+$shadow: rgba(0, 0, 0, 0.3)
+
+// Z-Index properties
+$lowest: 0
+$middle: 5
+$highest: 10
 
 *
     font-family: 'Open Sans', Tahoma, serif
@@ -13,3 +23,6 @@ $shadow: rgba(0, 0, 0, 0.4)
 
 button
     color: $primary
+
+.disabled
+    background-color: $shadow

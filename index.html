@@ -13,20 +13,26 @@
 
 <body>
     <nav class="navbar navbar-fixed-top">
-        <div id="menu-btn" class="container-fluid">
-            <i id="menu" class="material-icons">menu</i>
+        <div class="container-fluid">
+            <span id="menu-btn" class="col-xs-5 col-md-5 col-lg-5"><i class="material-icons">menu</i></span>
+            <span id="name" class="col-xs-5 col-md-6 col-lg-5">Tyler Wray</span>
         </div>
-        <!-- /.container-fluid -->
     </nav>
+
     <div id="side-nav" class="closed">
         <ul>
-            <li>Tyler</li>
-            <li>Ashley</li>
-            <li>Lyla</li>
+            <li>Home</li>
+            <li>Skills</li>
+            <li>About</li>
+            <li>Hobbies</li>
+            <li>Contact</li>
 
         </ul>
     </div>
-    <div class="container">
+
+<div id="overlay" class="container closed"></div>
+<div id="overlay-fab" class="container closed"></div>
+    <div class="main-content container">
         <div class="jumbotron">
             <article>
                 <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Duis mollis,
@@ -93,6 +99,7 @@
             </article>
         </div>
     </div>
+
     <div class="fab-holder">
         <label for="fab-3" id="lbl-3" class="closed">More Info</label>
         <div id="fab-3" class="closed">
@@ -114,36 +121,12 @@
         </div>
     </div>
 
-    <div id="fab" class="closed">
+    <div id="fab" class="fab-main closed">
         <i id="icn-main" class="material-icons">add</i>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $('#fab').click(function() {
-                $('#fab').toggleClass('open');
-                $('#fab').toggleClass('closed');
-                $('#fab-1').toggleClass('open');
-                $('#fab-1').toggleClass('closed');
-                $('#fab-2').toggleClass('open');
-                $('#fab-2').toggleClass('closed');
-                $('#fab-3').toggleClass('open');
-                $('#fab-3').toggleClass('closed');
-                $('#lbl-1').toggleClass('open');
-                $('#lbl-1').toggleClass('closed');
-                $('#lbl-2').toggleClass('open');
-                $('#lbl-2').toggleClass('closed');
-                $('#lbl-3').toggleClass('open');
-                $('#lbl-3').toggleClass('closed');
-            });
-
-            $('#menu-btn').click(function() {
-                $('#side-nav').toggleClass('open');
-                $('#side-nav').toggleClass('closed');
-            });
-        });
-    </script>
+    <script src="scripts/index.js"></script>
 
 </body>
 
