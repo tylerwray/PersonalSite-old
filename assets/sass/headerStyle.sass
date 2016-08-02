@@ -2,19 +2,21 @@
     border-radius: 0px
     background-color: $primary
     z-index: $lowest + 1
+    animation: $fade-in
+    box-shadow: 0px 3px 15px 5px $shadow
 
-#menu-btn i
+#menu-btn
     color: white
     font-size: 45px
-    padding-top: 5px
+    float: left
 
     &:hover
         cursor: pointer
 
 #name
     font-size: 30px
+    margin-left: -50px
     color: white
-    height: 100%
 
     @media screen and (max-width: 480px)
         display: none
@@ -28,11 +30,43 @@
     position: fixed
     z-index: $highest
     transition: $standard-transition
+    padding: 0px
+    box-shadow: 3px 0px 30px 4px $shadow
 
     &.open
         transition: $standard-transition
         margin-left: 0px
 
-    & > ul > li
+.side-nav-icon
+    color: gray
+    font-size: 20px
+    padding-right: 10px
+    padding-top: 2px
+    transform: translateY(4px)
+
+.side-nav-header-icon
+    color: white
+    font-size: 45px
+
+.side-nav-item
+    padding: 10px
+
+    &:hover
+        cursor: pointer
+
+    &> a
         color: black
-        list-style-type: none
+
+    &>a:hover
+        text-decoration: none
+
+.side-nav-item-lower
+    @extend .side-nav-item
+
+
+.side-nav-header
+    background-color: $secondary
+    box-shadow: 0px 3px 10px 0px $shadow
+
+    &:hover
+        cursor: pointer

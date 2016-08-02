@@ -1,6 +1,6 @@
 // Main colors of site
-$primary: #F44336
-$secondary: #2196F3
+$primary: #2196F3
+$secondary: #F44336
 
 // Fab colors & order
 $first: #2196F3
@@ -8,14 +8,25 @@ $second: #43A047
 $third: #AB47BC
 
 // CSS standard function sets
-$standard-transition: all 500ms ease-in-out
-$fast-transition: all 200ms ease-in-out
+$standard-transition: all 325ms ease-in-out
+$fast-transition: all 150ms ease-in-out
 $shadow: rgba(0, 0, 0, 0.3)
 
 // Z-Index properties
 $lowest: 0
 $middle: 5
 $highest: 10
+
+// Animation names
+$fade-in: fade-in 600ms ease-in-out 0s 1 normal forwards running
+
+@keyframes fade-in
+    0%
+        transform: translateY(-50px)
+        opacity: 0
+    100%
+        transform: translateY(0px)
+        opacity: 1
 
 *
     font-family: 'Open Sans', Tahoma, serif
@@ -26,3 +37,23 @@ button
 
 .disabled
     background-color: $shadow
+
+.active
+    color: $primary
+
+    & > i
+        color: $primary
+
+a:link
+    text-decoration: none
+    color: inherit
+
+a:visited
+    color: inherit
+
+a:hover
+    text-decoration: none
+    color: inherit
+
+a:active
+    color: inherit

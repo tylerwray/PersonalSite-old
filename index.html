@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scaleable=no" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/stylesheet.css">
@@ -12,26 +12,31 @@
 </head>
 
 <body>
+    <div id="side-nav" class="container-fluid">
+        <header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
+        <a class="col-xs-12 side-nav-item active" href="#home"><i class="material-icons side-nav-icon">home</i>Home</a>
+
+        <a class="col-xs-12 side-nav-item" href="#skills"><i class="material-icons side-nav-icon">build</i>Skills</a>
+
+        <a class="col-xs-12 side-nav-item" href="#profile"><i class="material-icons side-nav-icon">account_circle</i>Profile</a>
+
+        <a class="col-xs-12 side-nav-item" href="#contact"><i class="material-icons side-nav-icon">import_contacts</i>Contact</a>
+
+        <a class="col-xs-12 side-nav-item" href="#settings"><i class="material-icons side-nav-icon">settings</i>Settings</a>
+
+        <a class="col-xs-12 side-nav-item" href="#about"><i class="material-icons side-nav-icon">info_outline</i>About</a>
+    </div>
+
     <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <span id="menu-btn" class="col-xs-5 col-md-5 col-lg-5"><i class="material-icons">menu</i></span>
-            <span id="name" class="col-xs-5 col-md-6 col-lg-5">Tyler Wray</span>
+        <div class="container-fluid text-center">
+            <div class="col-xs-12">
+                <i id="menu-btn" class="material-icons">menu</i><span id="name">Tyler James Wray</span>
+            </div>
         </div>
     </nav>
 
-    <div id="side-nav" class="closed">
-        <ul>
-            <li>Home</li>
-            <li>Skills</li>
-            <li>About</li>
-            <li>Hobbies</li>
-            <li>Contact</li>
-
-        </ul>
-    </div>
-
-<div id="overlay" class="container closed"></div>
-<div id="overlay-fab" class="container closed"></div>
+    <div id="overlay"></div>
+    <div id="overlay-fab"></div>
     <div class="main-content container">
         <div class="jumbotron">
             <article>
@@ -101,31 +106,31 @@
     </div>
 
     <div class="fab-holder">
-        <label for="fab-3" id="lbl-3" class="closed">More Info</label>
-        <div id="fab-3" class="closed">
+        <label for="fab-3" id="lbl-3" class="hidden">More Info</label>
+        <div id="fab-3" class="">
             <i id="icn-last" class="material-icons">info_outline</i>
         </div>
     </div>
 
     <div class="fab-holder">
-        <label for="fab-2" id="lbl-2" class="closed">Profile</label>
-        <div id="fab-2" class="closed">
-            <i id="icn-2" class="material-icons">account_circle</i>
+        <label for="fab-2" id="lbl-2" class="hidden">Call me</label>
+        <div id="fab-2" class="">
+            <i id="icn-2" class="material-icons">phone</i>
         </div>
     </div>
 
     <div class="fab-holder">
-        <label for="fab-1" id="lbl-1" class="closed">E-Mail Me</label>
-        <div id="fab-1" class="closed">
+        <label for="fab-1" id="lbl-1" class="hidden">E-Mail Me</label>
+        <div id="fab-1" class="">
             <i id="icn-1" class="material-icons">mail</i>
         </div>
     </div>
 
-    <div id="fab" class="fab-main closed">
+    <div id="fab" class="fab-main">
         <i id="icn-main" class="material-icons">add</i>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/jQuery/jquery-3.1.0.min.js"></script>
     <script src="scripts/index.js"></script>
 
 </body>
