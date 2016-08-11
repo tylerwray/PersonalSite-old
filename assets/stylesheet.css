@@ -8,16 +8,67 @@
 * {
   font-family: "Open Sans", Tahoma, serif; }
 
-button {
-  color: #2196F3; }
+.main-content {
+  padding-top: 80px;
+  position: relative;
+  z-index: 0; }
+
+.card {
+  background-color: white;
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-in;
+  padding: 0px;
+  border-radius: 2px; }
+  .card i {
+    font-size: 45px; }
+  .card:hover, .card:focus {
+    box-shadow: 0px 12px 12px -2px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in; }
+
+.card-button {
+  background-color: inherit;
+  border: none;
+  color: #AB47BC;
+  transition: all 200ms ease-in;
+  margin-left: 5px; }
+  .card-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 200ms ease-in;
+    border-radius: 2px; }
+
+.card-header {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 350px; }
+
+.card-title {
+  margin: 10px; }
+
+.card-text {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 5px; }
+
+.hr {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .disabled {
   background-color: rgba(0, 0, 0, 0.3); }
 
 .active {
   color: #2196F3; }
-  .active > i {
+  .active > a {
     color: #2196F3; }
+    .active > a > i {
+      color: #2196F3; }
 
 a:link {
   text-decoration: none;
@@ -33,32 +84,12 @@ a:hover {
 a:active {
   color: inherit; }
 
-body {
-  overflow: auto; }
-
-img {
+.container-fluid {
+  padding: 0px;
   width: 100%; }
 
-.main-content {
-  padding-top: 40px;
-  position: relative;
-  z-index: 0; }
-
-.card {
-  background-color: white;
-  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.4);
-  transition: all 200ms ease-in;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transform: scale(0.95); }
-  .card i {
-    font-size: 45px; }
-  .card:hover, .card:focus {
-    box-shadow: 0px 12px 12px -2px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 200ms ease-in;
-    transform: scale(1); }
+body {
+  background-color: rgba(204, 204, 204, 0.3); }
 
 .fab-main,
 .fab-holder {
@@ -254,10 +285,6 @@ img {
   padding: 10px; }
   .side-nav-item:hover, .side-nav-item-lower:hover {
     cursor: pointer; }
-  .side-nav-item > a, .side-nav-item-lower > a {
-    color: black; }
-  .side-nav-item > a:hover, .side-nav-item-lower > a:hover {
-    text-decoration: none; }
 
 .side-nav-header {
   background-color: #F44336;
@@ -265,7 +292,40 @@ img {
   .side-nav-header:hover {
     cursor: pointer; }
 
-.main-content {
-  padding-top: 30px; }
+#photo-desc {
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 10px; }
+  #photo-desc > p {
+    text-align: center; }
+
+#profile-photo {
+  height: 300px;
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #43A047; }
+
+#info-cards {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  margin-top: 20px; }
+
+#football-card > .card-header {
+  background-image: url("images/football.jpg");
+  background-position: center; }
+
+#family-card > .card-header {
+  background-image: url("images/my_family.jpg");
+  background-position: 50% 40%; }
+
+#technology-card > .card-header {
+  background-image: url("https://images-goldenfrog.netdna-ssl.com/vyprvpn/mac/banner_mac.png");
+  background-color: rgba(15, 50, 70, 0.6);
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=stylesheet.css.map */

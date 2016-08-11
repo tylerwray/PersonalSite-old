@@ -3,10 +3,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/stylesheet.css">
-    <meta title="Tyler Wray" />
+    <link rel="stylesheet" href="assets/stylesheet.css" />
+    <meta name="title" content="Tyler Wray" />
     <meta name="theme-color" content="#F44336" />
 
 </head>
@@ -14,32 +14,95 @@
 <body>
     <div id="side-nav" class="container-fluid">
         <header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
-        <a class="col-xs-12 side-nav-item active" href="#home"><i class="material-icons side-nav-icon">home</i>Home</a>
+        <span class="col-xs-12 side-nav-item active"><a href="assets/pages/home.html"><i class="material-icons side-nav-icon">home</i>Home</a></span>
 
-        <a class="col-xs-12 side-nav-item" href="#skills"><i class="material-icons side-nav-icon">build</i>Skills</a>
+        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">build</i>Skills</a></span>
 
-        <a class="col-xs-12 side-nav-item" href="#profile"><i class="material-icons side-nav-icon">account_circle</i>Profile</a>
+        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">account_circle</i>Profile</a></span>
 
-        <a class="col-xs-12 side-nav-item" href="#contact"><i class="material-icons side-nav-icon">import_contacts</i>Contact</a>
+        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">import_contacts</i>Contact</a></span>
 
-        <a class="col-xs-12 side-nav-item" href="#settings"><i class="material-icons side-nav-icon">settings</i>Settings</a>
+        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">settings</i>Settings</a></span>
 
-        <a class="col-xs-12 side-nav-item" href="#about"><i class="material-icons side-nav-icon">info_outline</i>About</a>
+        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">info_outline</i>About</a></span>
     </div>
 
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid text-center">
             <div class="col-xs-12">
-                <i id="menu-btn" class="material-icons">menu</i><span id="name">Tyler James Wray</span>
+                <i id="menu-btn" class="material-icons">menu</i><span id="name">Home</span>
             </div>
         </div>
     </nav>
 
     <div id="overlay"></div>
     <div id="overlay-fab"></div>
-    <div class="main-content container">
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4 text-center">
+                    <img id="profile-photo" src="assets/images/me.png" />
+                </div>
+                <div id="photo-desc" class="card col-xs-12 col-md-6 col-lg-8">
+                    <h2 class="text-center">Tyler James Wray</h2>
+                    <div class="hr"></div>
+                    <p>Hard work and fun have always seemed separate, but to me they are one and the same. Life is about working hard, and having fun while you do it. That's why I have such a passion for technology! When writing code, I get to have fun,
+                        work hard, and create something beautiful.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="info-cards" class="row">
+                <div class="col-xs-4">
+                    <div id="football-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Football</h3>
+                        <p class="card-text">Football has always been a passion of mine. I enjoy most sports, but football has always had a special place in my heart.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="family-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Family</h3>
+                        <p class="card-text">My Family is the most important part of my life. I do everything for them and I'm more grateful everyday for the love and support they show me.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="technology-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Technology</h3>
+                        <p class="card-text">Programming wasn't always my life's passion. I once used crappy software. When I realized I could improve it, I was hooked.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="technology-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Technology</h3>
+                        <p class="card-text">Programming wasn't always my life's passion. I once used crappy software. When I realized I could improve it, I was hooked.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="technology-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Technology</h3>
+                        <p class="card-text">Programming wasn't always my life's passion. I once used crappy software. When I realized I could improve it, I was hooked.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="technology-card" class="card">
+                        <div class="card-header"></div>
+                        <h3 class="card-title">Technology</h3>
+                        <p class="card-text">Programming wasn't always my life's passion. I once used crappy software. When I realized I could improve it, I was hooked.</p>
+                        <button class="card-button">Learn More</button>
+                    </div>
+                </div>
 
-            </article>
+            </div>
         </div>
     </div>
 
