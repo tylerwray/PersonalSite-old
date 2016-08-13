@@ -33,13 +33,13 @@ $(document).ready(function() {
         $('#overlay-fab').toggleClass('open');
 
         // Toggle the body scrollability
-        if ($('body').css('overflow') == 'auto')
+        if ($('body').css('overflow') == 'hidden')
         {
-            $('body').css('overflow', 'hidden');
+            $('body').css('overflow', 'auto');
         }
         else
         {
-            $('body').css('overflow', 'auto');
+            $('body').css('overflow', 'hidden');
         }
 
 
@@ -50,13 +50,13 @@ $(document).ready(function() {
         $('#overlay').toggleClass('open');
 
         // Toggle the body scrollability
-        if ($('body').css('overflow') == 'auto')
+        if ($('body').css('overflow') == 'hidden')
         {
-            $('body').css('overflow', 'hidden');
+            $('body').css('overflow', 'auto');
         }
         else
         {
-            $('body').css('overflow', 'auto');
+            $('body').css('overflow', 'hidden');
         }
     });
 

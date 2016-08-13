@@ -9,16 +9,17 @@
   font-family: "Open Sans", Tahoma, serif; }
 
 .main-content {
-  padding-top: 80px;
-  position: relative;
-  z-index: 0; }
+  padding-top: 80px; }
 
 .card {
   background-color: white;
   box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.4);
   transition: all 200ms ease-in;
   padding: 0px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  max-width: 500px; }
   .card i {
     font-size: 45px; }
   .card:hover, .card:focus {
@@ -30,7 +31,8 @@
   border: none;
   color: #AB47BC;
   transition: all 200ms ease-in;
-  margin-left: 5px; }
+  margin-left: 5px;
+  margin-bottom: 5px; }
   .card-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: all 200ms ease-in;
@@ -39,8 +41,7 @@
 .card-header {
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 350px; }
+  height: 180px; }
 
 .card-title {
   margin: 10px; }
@@ -48,7 +49,8 @@
 .card-text {
   margin-top: 5px;
   padding-left: 10px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  height: 100px; }
 
 .hr {
   background-color: rgba(0, 0, 0, 0.3);
@@ -85,8 +87,7 @@ a:active {
   color: inherit; }
 
 .container-fluid {
-  padding: 0px;
-  width: 100%; }
+  padding: 0px; }
 
 body {
   background-color: rgba(204, 204, 204, 0.3); }
@@ -293,12 +294,9 @@ body {
     cursor: pointer; }
 
 #photo-desc {
-  font-size: 20px;
-  padding: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  margin-top: 10px; }
-  #photo-desc > p {
-    text-align: center; }
+  padding: 10px;
+  margin: 10px auto; }
 
 #profile-photo {
   height: 300px;
@@ -308,10 +306,13 @@ body {
   background-color: #43A047; }
 
 #info-cards {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 1150px;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: 10px; }
+
+#info-card-holder {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 200px; }
 
 #football-card > .card-header {
   background-image: url("images/football.jpg");
@@ -325,7 +326,14 @@ body {
   background-image: url("https://images-goldenfrog.netdna-ssl.com/vyprvpn/mac/banner_mac.png");
   background-color: rgba(15, 50, 70, 0.6);
   background-position: center;
-  background-size: 90%;
+  background-size: 70%;
   background-repeat: no-repeat; }
+
+@media screen and (max-width: 1150px) {
+  #info-cards {
+    margin: 0 10px; } }
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
