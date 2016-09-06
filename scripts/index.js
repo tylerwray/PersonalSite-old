@@ -15,6 +15,20 @@ function closeAll() {
     }
 }
 
+function toggleOverlay() {
+    $('#overlay').toggleClass('open');
+
+    // Toggle the body scrollability
+    if ($('body').css('overflow') == 'hidden')
+    {
+        $('body').css('overflow', 'auto');
+    }
+    else
+    {
+        $('body').css('overflow', 'hidden');
+    }
+}
+
 function writeContent(one) {
     document.write(one);
 }
@@ -41,34 +55,16 @@ $(document).ready(function() {
         {
             $('body').css('overflow', 'hidden');
         }
-
-
     });
 
     $('#menu-btn').click(function() {
         $('#side-nav').toggleClass('open');
-        $('#overlay').toggleClass('open');
-
-        // Toggle the body scrollability
-        if ($('body').css('overflow') == 'hidden')
-        {
-            $('body').css('overflow', 'auto');
-        }
-        else
-        {
-            $('body').css('overflow', 'hidden');
-        }
+        toggleOverlay();
     });
 
     $('#overlay').click(function() {
         $('#side-nav').toggleClass('open');
-        $('#overlay').toggleClass('open');
-
-        // Toggle the body scrollability
-        if ($('body').css('overflow') == 'hidden')
-        {
-            $('body').css('overflow', 'auto');
-        }
+        toggleOverlay();
     });
 
     $('#overlay-fab').click(function() {
@@ -97,12 +93,10 @@ $(document).ready(function() {
 
     $('.side-nav-header').click(function() {
         $('#side-nav').toggleClass('open');
-        $('#overlay').toggleClass('open');
+        toggleOverlay();
+    });
 
-        // Toggle the body scrollability
-        if ($('body').css('overflow') == 'hidden')
-        {
-            $('body').css('overflow', 'auto');
-        }
+    $('#fab-1').click(function() {
+        $('#contact-card').toggleClass('open');
     });
 });
