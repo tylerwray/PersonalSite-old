@@ -14,17 +14,16 @@
 <body>
     <div id="side-nav" class="container-fluid">
         <header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
-        <span class="col-xs-12 side-nav-item active"><a href="assets/pages/home.html"><i class="material-icons side-nav-icon">home</i>Home</a></span>
 
-        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">build</i>Skills</a></span>
+        <span id="home" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">home</i>Home</span>
 
-        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">account_circle</i>Profile</a></span>
+        <span id="skills" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">build</i>Skills</span>
 
-        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">import_contacts</i>Contact</a></span>
+        <span id="contact" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">import_contacts</i>Contact</span>
 
-        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">settings</i>Settings</a></span>
+        <span id="settings" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">settings</i>Settings</span>
 
-        <span class="col-xs-12 side-nav-item"><a href=""><i class="material-icons side-nav-icon">info_outline</i>About</a></span>
+        <span id="about" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">info_outline</i>About</span>
     </div>
 
     <nav class="navbar navbar-fixed-top">
@@ -37,65 +36,8 @@
 
     <div id="overlay"></div>
     <div id="overlay-fab"></div>
-    <div class="main-content">
-        <!-- BEGIN PROFILE -->
-        <div id="person-info" class="container">
-            <div class="row">
-                <div class="col-xs-12 col-lg-4 text-center">
-                    <img id="profile-photo" src="assets/images/me.png" />
-                </div>
-                <div class="col-xs-12 col-lg-8 text-center">
-                    <div id="photo-desc">
-                        <h2 class="text-center">Tyler James Wray</h2>
-                        <div class="hr"></div>
-                        <p>Hard work and fun have always seemed separate, but to me they are one and the same. Life is about working hard, and having fun while you do it. That's why I have such a passion for technology! When writing code, I get to have fun,
-                            work hard, and create something beautiful</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END PROFILE -->
+    <div id="main-content">
 
-        <!-- BEGIN INFO CARDS -->
-        <div id="info-card-holder" class="container-fluid">
-            <div class="row">
-                <div id="info-cards">
-                    <div class="col-xs-6 col-md-3">
-                        <div id="family-card" class="card">
-                            <div class="card-header"></div>
-                            <h3 class="card-title">Family</h3>
-                            <p class="card-text">My Family is the most important part of my life. I do everything for them and I'm more grateful everyday for the love and support they show me</p>
-                            <button class="card-button">Learn More</button>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div id="football-card" class="card">
-                            <div class="card-header"></div>
-                            <h3 class="card-title">Football</h3>
-                            <p class="card-text">Football has always been a passion of mine. I enjoy most sports, but football has always had a special place in my heart</p>
-                            <button class="card-button">Learn More</button>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div id="technology-card" class="card">
-                            <div class="card-header"></div>
-                            <h3 class="card-title">Technology</h3>
-                            <p class="card-text">Programming wasn't always my life's passion. I once used crappy software. When I realized I could improve it, I was hooked</p>
-                            <button class="card-button">Learn More</button>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div id="space-card" class="card">
-                            <div class="card-header"></div>
-                            <h3 class="card-title">Space</h3>
-                            <p class="card-text">I have always found a sense of safety and purpose in the stars. I look up at the stars and realize that life's problems can be handled</p>
-                            <button class="card-button">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END INFO CARDS -->
 
 
     </div>
@@ -153,11 +95,18 @@
     </div>
 
 
-        <div id="contact-card" class="">
-            wraytw@gmail.com
-        </div>
+    <div id="contact-card" class="">
+        wraytw@gmail.com
+    </div>
     <script type="text/javascript" src="assets/jQuery/jquery-3.1.0.min.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/nav_events.js"></script>
+    <script src="scripts/generic_functions.js"></script>
+    <script type="text/javascript">
+    $(document).ready( function(){
+        $('#main-content').load('about.html');
+    });
+    </script>
 
 </body>
 

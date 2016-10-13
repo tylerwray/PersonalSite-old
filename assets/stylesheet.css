@@ -305,7 +305,8 @@ body {
   margin-top: 5px; }
 
 .footer-info {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 10px; }
 
 #contact-card {
   background-color: white;
