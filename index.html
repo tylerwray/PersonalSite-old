@@ -4,8 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/stylesheet.css" />
+    <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="javascript/index.js"></script>
     <meta name="title" content="Tyler Wray" />
     <meta name="theme-color" content="#F44336" />
 
@@ -34,15 +35,9 @@
         </div>
     </nav>
 
-    <div id="overlay"></div>
-    <div id="overlay-fab"></div>
     <div id="main-content">
-
-
-
+        
     </div>
-
-
     <footer>
         <div class="container">
             <div class="row">
@@ -94,19 +89,12 @@
         <i id="icn-main" class="material-icons">add</i>
     </div>
 
-
-    <div id="contact-card" class="">
-        wraytw@gmail.com
-    </div>
-    <script type="text/javascript" src="assets/jQuery/jquery-3.1.0.min.js"></script>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/nav_events.js"></script>
-    <script src="scripts/generic_functions.js"></script>
-    <script type="text/javascript">
-    $(document).ready( function(){
-        $('#main-content').load('about.html');
-    });
-    </script>
+    <div id="overlay"></div>
+    <div id="overlay-fab"></div>
+    <script type="text/javascript" src="frameworks/jQuery/jquery-3.1.0.min.js"></script>
+    <script src="javascript/fab.js"></script>
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/generic_functions.js"></script>
 
 </body>
 

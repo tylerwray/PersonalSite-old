@@ -1,0 +1,377 @@
+@keyframes fade-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+* {
+  font-family: "Open Sans", Tahoma, serif; }
+
+.main-content {
+  padding-top: 80px; }
+
+.card {
+  background-color: white;
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-in;
+  padding: 0px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 500px; }
+  .card i {
+    font-size: 45px; }
+  .card:hover, .card:focus {
+    box-shadow: 0px 12px 12px -2px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in; }
+
+.card-button {
+  background-color: inherit;
+  border: none;
+  color: #AB47BC;
+  transition: all 200ms ease-in;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding: 5px; }
+  .card-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 200ms ease-in;
+    border-radius: 2px; }
+
+.card-header {
+  background-position: center;
+  background-size: cover;
+  height: 180px; }
+
+.card-title {
+  margin: 10px; }
+
+.card-text {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 100px; }
+
+.hr {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.disabled {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.active {
+  color: #2196F3; }
+  .active > a {
+    color: #2196F3; }
+    .active > a > i {
+      color: #2196F3; }
+
+a:link {
+  text-decoration: none;
+  color: inherit; }
+
+a:visited {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+a:active {
+  color: inherit; }
+
+.container-fluid {
+  padding: 0px; }
+
+footer {
+  background-color: black;
+  padding: 5px 20px;
+  color: white; }
+
+body {
+  background-color: rgba(204, 204, 204, 0.3); }
+
+.fab-main,
+.fab-holder {
+  z-index: 5; }
+
+#icn-main, #icn-1, #icn-2, #icn-last {
+  color: white;
+  font-size: 36px; }
+
+#main-content {
+  margin-top: 50px; }
+
+.navbar {
+  border-radius: 0px;
+  background-color: #2196F3;
+  z-index: 1;
+  animation: fade-in 600ms ease-in-out 0s 1 normal forwards running;
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3); }
+
+#menu-btn {
+  color: white;
+  font-size: 45px;
+  float: left; }
+  #menu-btn:hover {
+    cursor: pointer; }
+
+#name {
+  font-size: 30px;
+  margin-left: -50px;
+  color: white; }
+  @media screen and (max-width: 480px) {
+    #name {
+      display: none; } }
+
+#footer-globe, #footer-location, #footer-school, #footer-birthday {
+  font-size: 22px;
+  margin-top: 5px; }
+
+.footer-info {
+  font-size: 16px;
+  margin: 10px; }
+
+#side-nav {
+  margin-left: -250px;
+  display: block;
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  transition: all 325ms ease-in-out;
+  padding: 0px;
+  box-shadow: 3px 0px 30px 4px rgba(0, 0, 0, 0.3); }
+  #side-nav.open {
+    transition: all 325ms ease-in-out;
+    margin-left: 0px; }
+
+.side-nav-icon {
+  color: gray;
+  font-size: 20px;
+  padding-right: 10px;
+  padding-top: 2px;
+  transform: translateY(4px); }
+
+.side-nav-header-icon {
+  color: white;
+  font-size: 45px; }
+
+.side-nav-item, .side-nav-item-lower {
+  padding: 10px; }
+  .side-nav-item:hover, .side-nav-item-lower:hover {
+    cursor: pointer; }
+
+.side-nav-header {
+  background-color: #F44336;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
+  .side-nav-header:hover {
+    cursor: pointer; }
+
+#fab {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 5;
+  background-color: #F44336;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
+  #fab > i {
+    animation-name: rotate-a;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+  #fab:focus {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4); }
+  #fab.open {
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4); }
+  #fab.open > :first-child {
+    animation-name: rotate-x;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+
+#fab-1, #fab-2, #fab-3 {
+  width: 46px;
+  height: 46px;
+  position: fixed;
+  right: 16px;
+  bottom: 10px;
+  border-radius: 50%;
+  background-color: #2196F3;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: all 150ms ease-in-out;
+  transition-delay: 0s;
+  z-index: 5;
+  opacity: 0; }
+  #fab-1 > :first-child, #fab-2 > :first-child, #fab-3 > :first-child {
+    padding: 11px;
+    font-size: 24px; }
+  #fab-1.open, .open#fab-2, .open#fab-3 {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    width: 46px;
+    height: 46px;
+    bottom: 85px;
+    opacity: 1;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
+
+#fab-2, #fab-3 {
+  background-color: #43A047;
+  bottom: 10px;
+  transition-delay: 0.05s; }
+  #fab-2.open, .open#fab-3 {
+    bottom: 150px; }
+
+#fab-3 {
+  bottom: 10px;
+  background-color: #AB47BC;
+  transition-delay: 0.1s; }
+  #fab-3.open {
+    bottom: 215px; }
+
+#lbl-1, #lbl-2, #lbl-3 {
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  opacity: 0;
+  color: black;
+  font-size: 14px;
+  font-weight: normal;
+  transition: all 150ms ease-in-out;
+  transition-delay: 0s;
+  box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6);
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  z-index: 5;
+  padding: 4px; }
+  #lbl-1.open, .open#lbl-2, .open#lbl-3 {
+    opacity: 1;
+    right: 80px;
+    bottom: 90px; }
+
+#lbl-2, #lbl-3 {
+  transition-delay: 0.05s; }
+  #lbl-2.open, .open#lbl-3 {
+    bottom: 155px; }
+
+#lbl-3 {
+  transition-delay: 0.1s; }
+  #lbl-3.open {
+    bottom: 220px;
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6); }
+
+#overlay, #overlay-fab {
+  transition: all 325ms ease-in-out;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 6; }
+  #overlay.open, .open#overlay-fab {
+    visibility: visible;
+    transition: all 325ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4); }
+
+#overlay-fab {
+  z-index: 4;
+  background-color: transparent;
+  transition: all 325ms ease-in-out; }
+  #overlay-fab.open {
+    background-color: rgba(255, 255, 255, 0.82); }
+
+@keyframes rotate-x {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(135deg); } }
+@keyframes rotate-a {
+  0% {
+    transform: rotateZ(135deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+#contact-card {
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  text-align: center;
+  position: fixed;
+  left: -20;
+  width: 300px;
+  height: 300px;
+  animation: show-card 500ms ease-in-out; }
+
+#contact-card.open {
+  z-index: 10;
+  position: fixed; }
+
+#person-info {
+  margin-bottom: 20px; }
+
+#photo-desc {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 50px auto; }
+
+#profile-photo {
+  height: 300px;
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #43A047; }
+
+#info-cards {
+  max-width: 1150px;
+  margin: 0 auto; }
+
+#info-card-holder {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#football-card > .card-header {
+  background-image: url("assets/images/football.jpg");
+  background-position: center; }
+
+#family-card > .card-header {
+  background-image: url("assets/images/my_family.jpg");
+  background-position: 50% 40%; }
+
+#technology-card > .card-header {
+  background-image: url("https://images-goldenfrog.netdna-ssl.com/vyprvpn/mac/banner_mac.png");
+  background-color: rgba(15, 50, 70, 0.6);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat; }
+
+#space-card > .card-header {
+  background-image: url("assets/images/bluemarble.jpg"); }
+
+@media screen and (max-width: 1150px) {
+  #info-cards {
+    margin: 0 10px; } }
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
