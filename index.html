@@ -3,28 +3,22 @@
 
 <head>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Fira+Sans" rel="stylesheet" />
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stylesheet.css" />
-    <script src="javascript/index.js"></script>
+    <script src="/javascript/index.js"></script>
     <meta name="title" content="Tyler Wray" />
     <meta name="theme-color" content="#F44336" />
-
 </head>
 
 <body>
     <div id="side-nav" class="container-fluid">
         <header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
-
-        <span id="home" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">home</i>Home</span>
-
-        <span id="skills" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">build</i>Skills</span>
-
-        <span id="contact" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">import_contacts</i>Contact</span>
-
-        <span id="settings" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">settings</i>Settings</span>
-
-        <span id="about" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">info_outline</i>About</span>
+        <div id="home" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">home</i>Home</div>
+        <div id="skills" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">build</i>Skills</div>
+        <div id="contact" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">import_contacts</i>Contact</div>
+        <div id="settings" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">settings</i>Settings</div>
+        <div id="about" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">info_outline</i>About</div>
     </div>
 
     <nav class="navbar navbar-fixed-top">
@@ -36,29 +30,29 @@
     </nav>
 
     <div id="main-content">
-        
+
     </div>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="footer-info col-xs-12">
                     <i id="footer-globe" class="material-icons">public</i>
-                    <span>- USA</span>
+                    - USA
                     <br />
                 </div>
                 <div class="footer-info col-xs-12">
                     <i id="footer-location" class="material-icons">location_on</i>
-                    <span>- Orem, Utah</span>
+                    - Orem, Utah
                     <br />
                 </div>
                 <div class="footer-info col-xs-12">
                     <i id="footer-school" class="material-icons">school</i>
-                    <span>- Utah Valley University (UVU)</span>
+                    - Utah Valley University (UVU)
                     <br />
                 </div>
                 <div class="footer-info col-xs-12">
                     <i id="footer-birthday" class="material-icons">cake</i>
-                    <span>- July 5, 1995</span>
+                    - July 5, 1995
                     <br />
                 </div>
             </div>
@@ -95,6 +89,11 @@
     <script src="javascript/fab.js"></script>
     <script src="javascript/nav.js"></script>
     <script src="javascript/generic_functions.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#main-content').load('/pages/home.html');
+    })
+    </script>
 
 </body>
 

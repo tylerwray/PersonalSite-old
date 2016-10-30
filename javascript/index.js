@@ -1,6 +1,6 @@
-function checkPage()
+function goToTop()
 {
-
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 
 function setURL(page)

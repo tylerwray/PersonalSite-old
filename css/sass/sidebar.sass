@@ -15,12 +15,13 @@
         transition: $standard-transition
         margin-left: 0px
 
+.side-nav-icon:hover
+    color: white
+
 .side-nav-icon
-    color: gray
-    font-size: 20px
+    font-size: 18px
     padding-right: 10px
-    padding-top: 2px
-    transform: translateY(4px)
+    transform: translateY(2px)
 
 .side-nav-header-icon
     color: white
@@ -28,9 +29,13 @@
 
 .side-nav-item
     padding: 10px
+    font-size: 14px
+    float: right
 
     &:hover
         cursor: pointer
+        background: $shadow
+        color: white
 
 .side-nav-item-lower
     @extend .side-nav-item
@@ -39,6 +44,7 @@
 .side-nav-header
     background-color: $secondary
     box-shadow: 0px 3px 10px 0px $shadow
+    z-index: $highest
 
     &:hover
         cursor: pointer

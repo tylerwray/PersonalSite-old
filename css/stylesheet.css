@@ -4,12 +4,9 @@
     opacity: 0; }
   100% {
     transform: translateY(0px);
-    opacity: 1; } }
+    opacity: 1w; } }
 * {
-  font-family: "Open Sans", Tahoma, serif; }
-
-.main-content {
-  padding-top: 80px; }
+  font-family: Arial, Tahoma, serif; }
 
 .card {
   background-color: white;
@@ -68,11 +65,10 @@
   background-color: rgba(0, 0, 0, 0.3); }
 
 .active {
-  color: #2196F3; }
-  .active > a {
-    color: #2196F3; }
-    .active > a > i {
-      color: #2196F3; }
+  color: white;
+  background-color: #424242; }
+  .active > a, .active i {
+    color: white; }
 
 a:link {
   text-decoration: none;
@@ -108,12 +104,13 @@ body {
   font-size: 36px; }
 
 #main-content {
-  margin-top: 50px; }
+  margin-top: 100px;
+  min-height: 700px; }
 
 .navbar {
   border-radius: 0px;
-  background-color: #2196F3;
-  z-index: 1;
+  background-color: #039be5;
+  z-index: 2;
   animation: fade-in 600ms ease-in-out 0s 1 normal forwards running;
   box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3); }
 
@@ -156,25 +153,31 @@ body {
     transition: all 325ms ease-in-out;
     margin-left: 0px; }
 
+.side-nav-icon:hover {
+  color: white; }
+
 .side-nav-icon {
-  color: gray;
-  font-size: 20px;
+  font-size: 18px;
   padding-right: 10px;
-  padding-top: 2px;
-  transform: translateY(4px); }
+  transform: translateY(2px); }
 
 .side-nav-header-icon {
   color: white;
   font-size: 45px; }
 
 .side-nav-item, .side-nav-item-lower {
-  padding: 10px; }
+  padding: 10px;
+  font-size: 14px;
+  float: right; }
   .side-nav-item:hover, .side-nav-item-lower:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    color: white; }
 
 .side-nav-header {
-  background-color: #F44336;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
+  background-color: #e51603;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  z-index: 10; }
   .side-nav-header:hover {
     cursor: pointer; }
 
@@ -188,7 +191,7 @@ body {
   right: 10px;
   bottom: 10px;
   z-index: 5;
-  background-color: #F44336;
+  background-color: #e51603;
   transition: all 150ms ease-in-out;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
   #fab > i {
@@ -350,11 +353,11 @@ body {
   background-color: rgba(0, 0, 0, 0.3); }
 
 #football-card > .card-header {
-  background-image: url("assets/images/football.jpg");
+  background-image: url("/assets/images/football.jpg");
   background-position: center; }
 
 #family-card > .card-header {
-  background-image: url("assets/images/my_family.jpg");
+  background-image: url("/assets/images/my_family.jpg");
   background-position: 50% 40%; }
 
 #technology-card > .card-header {
@@ -365,7 +368,7 @@ body {
   background-repeat: no-repeat; }
 
 #space-card > .card-header {
-  background-image: url("assets/images/bluemarble.jpg"); }
+  background-image: url("/assets/images/bluemarble.jpg"); }
 
 @media screen and (max-width: 1150px) {
   #info-cards {
@@ -373,5 +376,68 @@ body {
 @media screen and (max-width: 500px) {
   * {
     font-size: 12px; } }
+.jobCircle {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease-in-out;
+  z-index: 1; }
+  .jobCircle:hover {
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4);
+    transition: all 300ms ease-in-out;
+    cursor: pointer; }
+
+.jobDescription {
+  color: white;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 10px; }
+
+.jobTitle {
+  font-family: "Fira Sans", Tahoma;
+  font-size: 24px; }
+
+.jobPhoto {
+  width: 140px; }
+
+.jobSummary {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  padding: 10px; }
+
+#job1, #job2, #job3, #job4, #job5, #job6 {
+  background-color: #FF5252;
+  margin-bottom: 30px; }
+
+#job2, #job3, #job4, #job5, #job6 {
+  background-color: #9C27B0;
+  margin-top: 20px; }
+
+#job3, #job4, #job5, #job6 {
+  background-color: #FFC107; }
+
+#job4, #job5, #job6 {
+  background-color: #FFD600; }
+
+#job5, #job6 {
+  background-color: #43A047; }
+
+#job6 {
+  background-color: #FF4081; }
+
+@media screen and (max-width: 1200px) {
+  .jobLeft {
+    right: 100px; }
+
+  .jobRight {
+    left: 100px; } }
+@media screen and (max-width: 800px) {
+  .jobLeft {
+    right: -132px; }
+
+  .jobRight {
+    left: -132px; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
