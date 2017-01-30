@@ -8,7 +8,7 @@ $('#fab').click(function()
     $('#lbl-1').toggleClass('open');
     $('#lbl-2').toggleClass('open');
     $('#lbl-3').toggleClass('open');
-    $('#overlay-fab').toggleClass('open');
+    $('#fab-overlay').toggleClass('open');
 
     // Toggle the body scrollability
     if ($('body').css('overflow') == 'hidden')
@@ -22,7 +22,7 @@ $('#fab').click(function()
 });
 
 // Handler for FAB overlay
-$('#overlay-fab').click(function()
+$('#fab-overlay').click(function()
 {
     $('#fab').toggleClass('open');
     $('#fab-1').toggleClass('open');
@@ -31,7 +31,7 @@ $('#overlay-fab').click(function()
     $('#lbl-1').toggleClass('open');
     $('#lbl-2').toggleClass('open');
     $('#lbl-3').toggleClass('open');
-    $('#overlay-fab').toggleClass('open');
+    $('#fab-overlay').toggleClass('open');
 
     // Toggle the body scrollability
     if ($('body').css('overflow') == 'hidden')

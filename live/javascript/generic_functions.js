@@ -7,7 +7,7 @@ function closeAll() {
     $('#lbl-2').removeClass('open');
     $('#lbl-3').removeClass('open');
     $('#overlay').removeClass('open');
-    $('#overlay-fab').removeClass('open');
+    $('#fab-overlay').removeClass('open');
 
     if ($('body').css('overflow') == 'hidden')
     {
