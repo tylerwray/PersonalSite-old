@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Fira+Sans" rel="stylesheet" />
+		<link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="live/css/stylesheet.css" />
+		<title>Tyler Wray</title>
+		<meta name="theme-color" content="#F44336" />
+	</head>
 
-<head>
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Fira+Sans" rel="stylesheet" />
-    <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/stylesheet.css" />
-    <scrip src="/javascript/index.js"></script>
-    <meta name="title" content="Tyler Wray" />
-    <meta name="theme-color" content="#F44336" />
-</head>
+	<body>
+		<div id="side-nav" class="container-fluid">
+			<header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
+			<div id="home" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">home</i>Home</div>
+			<div id="skills" class="col-xs-12 side-nav-item"><a href="pages/home.html"><i class="material-icons side-nav-icon">build</i>Skills</a></div>
+			<div id="contact" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">import_contacts</i>Contact</div>
+			<div id="settings" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">settings</i>Settings</div>
+			<div id="about" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">info_outline</i>About</div>
+		</div>
 
-<body>
-    <div id="side-nav" class="container-fluid">
-        <header class="side-nav-header col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></header>
-        <div id="home" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">home</i>Home</div>
-        <div id="skills" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">build</i>Skills</div>
-        <div id="contact" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">import_contacts</i>Contact</div>
-        <div id="settings" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">settings</i>Settings</div>
-        <div id="about" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">info_outline</i>About</div>
-    </div>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid text-center">
+				<div class="col-xs-12">
+					<i id="menu-btn" class="material-icons">menu</i><span id="name">Home</span>
+				</div>
+			</div>
+		</nav>
 
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid text-center">
-            <div class="col-xs-12">
-                <i id="menu-btn" class="material-icons">menu</i><span id="name">Home</span>
-            </div>
-        </div>
-    </nav>
+		<div id="main-content"></div>
 
-    <div id="main-content">
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="footer-info col-xs-12"><i class="material-icons footer-icon">public</i>USA<br /></div>
+					<div class="footer-info col-xs-12"><i class="material-icons footer-icon">location_on</i>Orem, Utah<br /></div>
+					<div class="footer-info col-xs-12"><i class="material-icons footer-icon">school</i>Utah Valley University (UVU)<br /></div>
+					<div class="footer-info col-xs-12"><i class="material-icons footer-icon">cake</i>July 5, 1995<br /></div>
+				</div>
+			</div>
+		</footer>
 
-    </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="footer-info col-xs-12">
-                    <i id="footer-globe" class="material-icons">public</i>
-                    - USA
-                    <br />
-                </div>
-                <div class="footer-info col-xs-12">
-                    <i id="footer-location" class="material-icons">location_on</i>
-                    - Orem, Utah
-                    <br />
-                </div>
-                <div class="footer-info col-xs-12">
-                    <i id="footer-school" class="material-icons">school</i>
-                    - Utah Valley University (UVU)
-                    <br />
-                </div>
-                <div class="footer-info col-xs-12">
-                    <i id="footer-birthday" class="material-icons">cake</i>
-                    - July 5, 1995
-                    <br />
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="fab-holder">
-        <label for="fab-3" id="lbl-3" class="hidden">More Info</label>
-        <div id="fab-3" class="">
-            <i id="icn-last" class="material-icons">info_outline</i>
-        </div>
-    </div>
+		<div class="fab-holder">
+			<label for="fab-3" id="lbl-3">More Info</label>
+			<div id="fab-3" class="">
+				<i id="icn-last" class="material-icons">info_outline</i>
+			</div>
+		</div>
 
-    <div class="fab-holder">
-        <label for="fab-2" id="lbl-2" class="hidden">Call me</label>
-        <div id="fab-2" class="">
-            <i id="icn-2" class="material-icons">phone</i>
-        </div>
-    </div>
+		<div class="fab-holder">
+			<label for="fab-2" id="lbl-2">Call me</label>
+			<div id="fab-2" class="">
+				<i id="icn-2" class="material-icons">phone</i>
+			</div>
+		</div>
 
-    <div class="fab-holder">
-        <label for="fab-1" id="lbl-1" class="hidden">E-Mail Me</label>
-        <div id="fab-1" class="">
-            <i id="icn-1" class="material-icons">mail</i>
-        </div>
-    </div>
+		<div class="fab-holder">
+			<label for="fab-1" id="lbl-1">E-Mail Me</label>
+			<div id="fab-1" class="">
+				<i id="icn-1" class="material-icons">mail</i>
+			</div>
+		</div>
 
-    <div id="fab" class="fab-main">
-        <i id="icn-main" class="material-icons">add</i>
-    </div>
+		<div id="fab" class="fab-main">
+			<i id="icn-main" class="material-icons">add</i>
+		</div>
 
-    <div id="overlay"></div>
-    <div id="overlay-fab"></div>
-    <script type="text/javascript" src="frameworks/jQuery/jquery-3.1.0.min.js"></script>
-    <script src="javascript/fab.js"></script>
-    <script src="javascript/nav.js"></script>
-    <script src="javascript/generic_functions.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('#main-content').load('/pages/home.html');
-    })
-    </script>
-
-</body>
+		<div id="overlay"></div>
+		<div id="overlay-fab"></div>
+		<script type="text/javascript" src="frameworks/jQuery/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="live/javascript/fab.js"></script>
+		<script type="text/javascript" src="live/javascript/nav.js"></script>
+		<script type="text/javascript" src="live/javascript/generic_functions.js"></script>
+		<script>
+			// TODO: Don't know where else to put this.
+			// This is all actions needed the first time someone visits the site
+			// Probably should go in main.js
+			$('#main-content').load('live/html/home.html');
+		</script>
+	</body>
 
 </html>
