@@ -1,3 +1,12 @@
+.fab-main,
+.fab-holder
+	z-index: $middle
+
+// Icon Styles
+#icn-main, #icn-1, #icn-2, #icn-last
+	color: white
+	font-size: 36px
+
 #fab
 	cursor: pointer
 	width: 56px
@@ -17,19 +26,19 @@
 		animation-duration: 350ms
 		animation-fill-mode: forwards
 
-		&:focus
-			cursor: pointer
-			transition: $fast-transition
-			box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
+	&:focus
+		cursor: pointer
+		transition: $fast-transition
+		box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
 
-		&.open
-			transition: $fast-transition
-			box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
+	&.open
+		transition: $fast-transition
+		box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4)
 
-		&.open > :first-child
-			animation-name: rotate-x
-			animation-duration: 350ms
-			animation-fill-mode: forwards
+	&.open > :first-child
+		animation-name: rotate-x
+		animation-duration: 350ms
+		animation-fill-mode: forwards
 
 #fab-1
 	width: 46px
@@ -60,21 +69,21 @@
 
 #fab-2
 	@extend #fab-1
-		background-color: $second
-		bottom: 10px
-		transition-delay: .05s
+	background-color: $second
+	bottom: 10px
+	transition-delay: .05s
 
-		&.open
-			bottom: 150px
+	&.open
+		bottom: 150px
 
 #fab-3
 	@extend #fab-2
-		bottom: 10px
-		background-color: $third
-		transition-delay: .1s
+	bottom: 10px
+	background-color: $third
+	transition-delay: .1s
 
-		&.open
-			bottom: 215px
+	&.open
+		bottom: 215px
 
 #lbl-1
 	position: fixed
@@ -85,70 +94,70 @@
 	font-size: 14px
 	font-weight: normal
 	transition: $fast-transition
-    transition-delay: 0s
-    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
-    border: 0.5px solid rgba(0, 0, 0, 0.1)
-    border-radius: 5px
-    background-color: white
-    z-index: $middle
-    padding: 4px
+	transition-delay: 0s
+	box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
+	border: 0.5px solid rgba(0, 0, 0, 0.1)
+	border-radius: 5px
+	background-color: white
+	z-index: $middle
+	padding: 4px
 
-    &.open
-        opacity: 1
-        right: 80px
-        bottom: 90px
+	&.open
+		opacity: 1
+		right: 80px
+		bottom: 90px
 
 #lbl-2
-    @extend #lbl-1
-    transition-delay: .05s
+	@extend #lbl-1
+	transition-delay: .05s
 
-    &.open
-        bottom: 155px
+	&.open
+		bottom: 155px
 
 #lbl-3
-    @extend #lbl-2
-    transition-delay: .1s
+	@extend #lbl-2
+	transition-delay: .1s
 
-    &.open
-        bottom: 220px
-        box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
+	&.open
+		bottom: 220px
+		box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
 
 #overlay
-    transition: $standard-transition
-    visibility: hidden
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, 0)
-    z-index: $middle + 1
+	transition: $standard-transition
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0)
+	z-index: $middle + 1
 
-    &.open
-        visibility: visible
-        transition: $standard-transition
-        background-color: rgba(0, 0, 0, 0.4)
+	&.open
+		visibility: visible
+		transition: $standard-transition
+		background-color: rgba(0, 0, 0, 0.4)
 
 #fab-overlay
-    @extend #overlay
-    z-index: $middle - 1
-    background-color: rgba(0, 0, 0, 0)
-    transition: $standard-transition
+	@extend #overlay
+	z-index: $middle - 1
+	background-color: rgba(0, 0, 0, 0)
+	transition: $standard-transition
 
-    &.open
-        background-color: rgba(255, 255, 255, 0.82)
+	&.open
+		background-color: rgba(255, 255, 255, 0.82)
 
 // KEYFRAMES GO HERE
 @keyframes rotate-x
-    0%
-        transform: rotateZ(0deg)
-    100%
-        transform: rotateZ(135deg)
+	0%
+		transform: rotateZ(0deg)
+	100%
+		transform: rotateZ(135deg)
 
 @keyframes rotate-a
-    0%
-        transform: rotateZ(135deg)
-    100%
-        transform: rotateZ(0deg)
+	0%
+		transform: rotateZ(135deg)
+	100%
+		transform: rotateZ(0deg)

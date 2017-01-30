@@ -1,69 +1,443 @@
-/*
-Error: Inconsistent indentation: 4 spaces were used for indentation, but the rest of the document was indented using 1 tab.
-        on line 88 of /Users/tylerwray/Projects/material-resume/live/css/sass/fab.sass
-        from line 6 of /Users/tylerwray/Projects/material-resume/live/css/sass/stylesheet.sass
+@keyframes fade-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1w; } }
+* {
+  font-family: Arial, Tahoma, serif; }
 
-83: 	opacity: 0
-84: 	color: black
-85: 	font-size: 14px
-86: 	font-weight: normal
-87: 	transition: $fast-transition
-88:     transition-delay: 0s
-89:     box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)
-90:     border: 0.5px solid rgba(0, 0, 0, 0.1)
-91:     border-radius: 5px
-92:     background-color: white
-93:     z-index: $middle
+.card {
+  background-color: white;
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-in;
+  padding: 0px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 500px; }
+  .card i {
+    font-size: 45px; }
+  .card:hover, .card:focus {
+    box-shadow: 0px 12px 12px -2px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in; }
 
-Backtrace:
-/Users/tylerwray/Projects/material-resume/live/css/sass/fab.sass:88
-/Users/tylerwray/Projects/material-resume/live/css/sass/stylesheet.sass:6
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:486:in `block in tabulate'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each_with_index'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `tabulate'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:312:in `to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Inconsistent indentation: 4 spaces were used for indentation, but the rest of the document was indented using 1 tab.\A         on line 88 of /Users/tylerwray/Projects/material-resume/live/css/sass/fab.sass\A         from line 6 of /Users/tylerwray/Projects/material-resume/live/css/sass/stylesheet.sass\A \A 83: 	opacity: 0\A 84: 	color: black\A 85: 	font-size: 14px\A 86: 	font-weight: normal\A 87: 	transition: $fast-transition\A 88:     transition-delay: 0s\A 89:     box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6)\A 90:     border: 0.5px solid rgba(0, 0, 0, 0.1)\A 91:     border-radius: 5px\A 92:     background-color: white\A 93:     z-index: $middle"; }
+.card-button {
+  background-color: inherit;
+  border: none;
+  color: #AB47BC;
+  transition: all 200ms ease-in;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding: 5px; }
+  .card-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 200ms ease-in;
+    border-radius: 2px; }
+
+.card-header {
+  background-position: center;
+  background-size: cover;
+  height: 180px; }
+
+.card-title {
+  margin: 10px; }
+
+.card-text {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 100px; }
+
+.hr {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.disabled {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.active {
+  color: white;
+  background-color: #424242; }
+  .active > a, .active i {
+    color: white; }
+
+a:link {
+  text-decoration: none;
+  color: inherit; }
+
+a:visited {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+a:active {
+  color: inherit; }
+
+.container-fluid {
+  padding: 0px; }
+
+footer {
+  background-color: black;
+  padding: 5px 20px;
+  color: white; }
+
+body {
+  background-color: rgba(204, 204, 204, 0.3); }
+
+#main {
+  margin-top: 100px;
+  min-height: 700px; }
+
+.navbar {
+  border-radius: 0px;
+  background-color: #039be5;
+  z-index: 2;
+  animation: fade-in 600ms ease-in-out 0s 1 normal forwards running;
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3); }
+
+#menu-btn {
+  color: white;
+  font-size: 45px;
+  float: left; }
+  #menu-btn:hover {
+    cursor: pointer; }
+
+#name {
+  font-size: 30px;
+  margin-left: -50px;
+  color: white; }
+  @media screen and (max-width: 480px) {
+    #name {
+      display: none; } }
+
+#side-nav {
+  margin-left: -250px;
+  display: block;
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  transition: all 325ms ease-in-out;
+  padding: 0px;
+  box-shadow: 3px 0px 30px 4px rgba(0, 0, 0, 0.3); }
+  #side-nav.open {
+    transition: all 325ms ease-in-out;
+    margin-left: 0px; }
+
+.side-nav-icon:hover {
+  color: white; }
+
+.side-nav-icon {
+  font-size: 18px;
+  padding-right: 10px;
+  transform: translateY(2px); }
+
+.side-nav-header-icon {
+  color: white;
+  font-size: 45px; }
+
+.side-nav-item, .side-nav-item-lower {
+  padding: 10px;
+  font-size: 14px;
+  float: right; }
+  .side-nav-item:hover, .side-nav-item-lower:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    color: white; }
+
+.side-nav-header {
+  background-color: #e51603;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+  .side-nav-header:hover {
+    cursor: pointer; }
+
+.footer-icon {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-right: 5px; }
+
+.footer-info {
+  font-size: 16px;
+  margin: 10px; }
+
+.fab-main,
+.fab-holder {
+  z-index: 5; }
+
+#icn-main, #icn-1, #icn-2, #icn-last {
+  color: white;
+  font-size: 36px; }
+
+#fab {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 5;
+  background-color: #e51603;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
+  #fab > i {
+    animation-name: rotate-a;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+  #fab:focus {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4); }
+  #fab.open {
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4); }
+  #fab.open > :first-child {
+    animation-name: rotate-x;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+
+#fab-1, #fab-2, #fab-3 {
+  width: 46px;
+  height: 46px;
+  position: fixed;
+  right: 16px;
+  bottom: 10px;
+  border-radius: 50%;
+  background-color: #2196F3;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: all 150ms ease-in-out;
+  transition-delay: 0s;
+  z-index: 5;
+  opacity: 0;
+  padding: 11px;
+  font-size: 24px; }
+  #fab-1.open, .open#fab-2, .open#fab-3 {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    width: 46px;
+    height: 46px;
+    bottom: 85px;
+    opacity: 1;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
+
+#fab-2, #fab-3 {
+  background-color: #43A047;
+  bottom: 10px;
+  transition-delay: 0.05s; }
+  #fab-2.open, .open#fab-3 {
+    bottom: 150px; }
+
+#fab-3 {
+  bottom: 10px;
+  background-color: #AB47BC;
+  transition-delay: 0.1s; }
+  #fab-3.open {
+    bottom: 215px; }
+
+#lbl-1, #lbl-2, #lbl-3 {
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  opacity: 0;
+  color: black;
+  font-size: 14px;
+  font-weight: normal;
+  transition: all 150ms ease-in-out;
+  transition-delay: 0s;
+  box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6);
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  z-index: 5;
+  padding: 4px; }
+  #lbl-1.open, .open#lbl-2, .open#lbl-3 {
+    opacity: 1;
+    right: 80px;
+    bottom: 90px; }
+
+#lbl-2, #lbl-3 {
+  transition-delay: 0.05s; }
+  #lbl-2.open, .open#lbl-3 {
+    bottom: 155px; }
+
+#lbl-3 {
+  transition-delay: 0.1s; }
+  #lbl-3.open {
+    bottom: 220px;
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.6); }
+
+#overlay, #fab-overlay {
+  transition: all 325ms ease-in-out;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 6; }
+  #overlay.open, .open#fab-overlay {
+    visibility: visible;
+    transition: all 325ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4); }
+
+#fab-overlay {
+  z-index: 4;
+  background-color: transparent;
+  transition: all 325ms ease-in-out; }
+  #fab-overlay.open {
+    background-color: rgba(255, 255, 255, 0.82); }
+
+@keyframes rotate-x {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(135deg); } }
+@keyframes rotate-a {
+  0% {
+    transform: rotateZ(135deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+#contact-card {
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  text-align: center;
+  position: fixed;
+  left: -20;
+  width: 300px;
+  height: 300px;
+  animation: show-card 500ms ease-in-out; }
+
+#contact-card.open {
+  z-index: 10;
+  position: fixed; }
+
+#person-info {
+  margin-bottom: 20px; }
+
+#photo-desc {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 50px auto; }
+
+#profile-photo {
+  height: 300px;
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #43A047; }
+
+#info-cards {
+  max-width: 1150px;
+  margin: 0 auto; }
+
+#info-card-holder {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#football-card > .card-header {
+  background-image: url("/assets/images/football.jpg");
+  background-position: center; }
+
+#family-card > .card-header {
+  background-image: url("/assets/images/my_family.jpg");
+  background-position: 50% 40%; }
+
+#technology-card > .card-header {
+  background-image: url("https://images-goldenfrog.netdna-ssl.com/vyprvpn/mac/banner_mac.png");
+  background-color: rgba(15, 50, 70, 0.6);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat; }
+
+#space-card > .card-header {
+  background-image: url("/assets/images/bluemarble.jpg"); }
+
+@media screen and (max-width: 1150px) {
+  #info-cards {
+    margin: 0 10px; } }
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 12px; } }
+.jobCircle {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease-in-out;
+  z-index: 1; }
+  .jobCircle:hover {
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.4);
+    transition: all 300ms ease-in-out;
+    cursor: pointer; }
+
+.jobDescription {
+  color: white;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 10px; }
+
+.jobTitle {
+  font-family: "Fira Sans", Tahoma;
+  font-size: 24px; }
+
+.jobPhoto {
+  width: 140px; }
+
+.jobSummary {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  padding: 10px; }
+
+#job1, #job2, #job3, #job4, #job5, #job6 {
+  background-color: #FF5252;
+  margin-bottom: 30px; }
+
+#job2, #job3, #job4, #job5, #job6 {
+  background-color: #9C27B0;
+  margin-top: 20px; }
+
+#job3, #job4, #job5, #job6 {
+  background-color: #FFC107; }
+
+#job4, #job5, #job6 {
+  background-color: #FFD600; }
+
+#job5, #job6 {
+  background-color: #43A047; }
+
+#job6 {
+  background-color: #FF4081; }
+
+@media screen and (max-width: 1200px) {
+  .jobLeft {
+    right: 100px; }
+
+  .jobRight {
+    left: 100px; } }
+@media screen and (max-width: 800px) {
+  .jobLeft {
+    right: -132px; }
+
+  .jobRight {
+    left: -132px; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
