@@ -158,11 +158,11 @@ body {
     background: rgba(0, 0, 0, 0.3);
     color: white; }
 
-.side-nav-header {
+#side-nav-header {
   background-color: #e51603;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
   z-index: 10; }
-  .side-nav-header:hover {
+  #side-nav-header:hover {
     cursor: pointer; }
 
 .footer-icon {

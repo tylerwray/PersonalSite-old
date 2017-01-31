@@ -11,7 +11,13 @@ function setMainDivContent(htmlPage)
 	$('#main').load(fullFilePath);
 }
 
-function closeAll() {
+function setPageHeader(newHeaderName)
+{
+	$('#name').html(newHeaderName);
+}
+
+// Closes all menu items,
+function resetPageVisibility() {
     $('#fab').removeClass('open');
     $('#fab-1').removeClass('open');
     $('#fab-2').removeClass('open');

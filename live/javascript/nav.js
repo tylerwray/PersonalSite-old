@@ -10,56 +10,42 @@ $('.side-nav-item, .side-nav-item-lower').click(function()
     $('.side-nav-item, .side-nav-item-lower').removeClass('active');
     $(this).toggleClass('active');
     $('#side-nav').toggleClass('open');
-    closeAll();
+    resetPageVisibility();
 });
 
 // Closes Side Nav Bar
-$('.side-nav-header').click(function()
+$('#side-nav-header').click(function()
 {
-    $('#side-nav').toggleClass('open');
-    toggleOverlay();
+	$('#side-nav').toggleClass('open');
+	toggleOverlay();
 });
 
 // Closes overlay
 $('#overlay').click(function()
 {
-    $('#side-nav').toggleClass('open');
-    toggleOverlay();
+	$('#side-nav').toggleClass('open');
+	toggleOverlay();
 });
 
 //------- Nav Items Even Handlers -------
 
-// Home Click Function
-$('#home').click( function(){
-    $('#main').load('pages/home.html');
-    $('#name').html('Home');
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-});
-
 // Skills Click Function
-$('#skills').click( function(){
-    $('#main-content').load('/pages/404.html');
-    $('#name').html('Skills');
+$('#work-history').click( function(){
+	setMainDivContent('Work History');
+	setPageHeader('work-history');
     goToTopOfPage();
 });
 
 // Contact Click Function
 $('#contact').click( function(){
-    $('#main-content').load('/pages/404.html');
-    $('#name').html('Contact');
-    goToTopOfPage();
-});
-
-// Settings Click Function
-$('#settings').click( function(){
-    $('#main-content').load('/pages/404.html');
-    $('#name').html('Settings');
-    goToTopOfPage();
+	setMainDivContent('404');
+	setPageHeader('Contact Information');
+	goToTopOfPage();
 });
 
 // About Click Function
 $('#about').click( function(){
-    $('#main-content').load('/pages/about.html');
-    $('#name').html('About');
+    setMainDivContent('about');
+	setPageHeader('About');
     goToTopOfPage();
 });
