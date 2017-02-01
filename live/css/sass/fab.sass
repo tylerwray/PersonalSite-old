@@ -3,9 +3,13 @@
 	z-index: $middle
 
 // Icon Styles
-#icn-main, #icn-1, #icn-2, #icn-last
+#icn-main
 	color: white
 	font-size: 36px
+
+#icn-1, #icn-2, #icn-last
+	@extend #icn-main
+	font-size: 24px
 
 #fab
 	cursor: pointer

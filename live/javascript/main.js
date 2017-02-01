@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// Load 'home.html' initially for the user in div id="main"
-	setMainDivContent('about');
+	setMainDivContent('profile');
 });
 
 // param htmlPage: name of the .html file you wish
