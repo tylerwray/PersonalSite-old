@@ -1,10 +1,11 @@
 // Hamburger Menu Click event Handler
 $('#menu-btn').click(function(){
     $('#side-nav').toggleClass('open');
+	toggleOverlay();
 });
 
 // Set Active state of Side Nav Items
-$('.side-nav-item, .side-nav-item-lower').click(function()
+$('.side-nav-item').click(function()
 {
     $('.side-nav-item, .side-nav-item-lower').removeClass('active');
     $(this).toggleClass('active');
@@ -45,6 +46,6 @@ $('#contact').click( function(){
 // About Click Function
 $('#about').click( function(){
     setMainDivContent('about');
-	setPageHeader('About');
+	setPageHeader('About Me');
     goToTopOfPage();
 });

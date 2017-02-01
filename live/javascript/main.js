@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// Load 'home.html' initially for the user in div id="main"
-	setMainDivContent('work-history');
+	setMainDivContent('about');
 });
 
 // param htmlPage: name of the .html file you wish
@@ -29,7 +29,7 @@ function resetPageVisibility() {
     $('#fab-overlay').removeClass('open');
 
 	// Toggle body scrollability
-	toggleOverflow();
+	toggleOverlay();
 }
 
 function toggleOverflow() {
