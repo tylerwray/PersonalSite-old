@@ -7,10 +7,13 @@ $('#menu-btn').click(function(){
 // Set Active state of Side Nav Items
 $('.side-nav-item').click(function()
 {
-    $('.side-nav-item, .side-nav-item-lower').removeClass('active');
+    $('.side-nav-item').removeClass('active');
     $(this).toggleClass('active');
     $('#side-nav').toggleClass('open');
-    resetPageVisibility();
+	setMainDivContent($(this).attr('data-file'));
+	setPageHeader($(this).attr('data-header'));
+	goToTopOfPage();
+	toggleOverlay();
 });
 
 // Closes Side Nav Bar
@@ -25,27 +28,4 @@ $('#overlay').click(function()
 {
 	$('#side-nav').toggleClass('open');
 	toggleOverlay();
-});
-
-//------- Nav Items Even Handlers -------
-
-// Skills Click Function
-$('#work-history').click( function(){
-	setMainDivContent('work-history');
-	setPageHeader('Work History');
-    goToTopOfPage();
-});
-
-// Contact Click Function
-$('#contact').click( function(){
-	setMainDivContent('404');
-	setPageHeader('Contact Information');
-	goToTopOfPage();
-});
-
-// About Click Function
-$('#about').click( function(){
-    setMainDivContent('about');
-	setPageHeader('About Me');
-    goToTopOfPage();
 });

@@ -25,8 +25,6 @@ function resetPageVisibility() {
     $('#lbl-1').removeClass('open');
     $('#lbl-2').removeClass('open');
     $('#lbl-3').removeClass('open');
-    $('#overlay').removeClass('open');
-    $('#fab-overlay').removeClass('open');
 
 	// Toggle body scrollability
 	toggleOverlay();
@@ -38,9 +36,6 @@ function toggleOverflow() {
 
 function toggleOverlay() {
     $('#overlay').toggleClass('open');
-
-    // Toggle the body scrollability
-    toggleOverflow();
 }
 
 function goToTopOfPage()

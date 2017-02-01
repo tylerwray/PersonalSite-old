@@ -1,21 +1,6 @@
 // Click Event Handler for the Fab
-$('#fab').click(function()
+$('#fab, #fab-overlay').click(function()
 {
-    $('#fab').toggleClass('open');
-    $('#fab-1').toggleClass('open');
-    $('#fab-2').toggleClass('open');
-    $('#fab-3').toggleClass('open');
-    $('#lbl-1').toggleClass('open');
-    $('#lbl-2').toggleClass('open');
-    $('#lbl-3').toggleClass('open');
-    $('#fab-overlay').toggleClass('open');
-
-    // Toggle the body scrollability
-    toggleOverflow();
-});
-
-// Handler for FAB overlay
-$('#fab-overlay').click(function(){
     $('#fab').toggleClass('open');
     $('#fab-1').toggleClass('open');
     $('#fab-2').toggleClass('open');
