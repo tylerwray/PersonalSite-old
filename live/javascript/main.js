@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// Load 'home.html' initially for the user in div id="main"
-	setMainDivContent('home');
+	setMainDivContent('work-history');
 });
 
 // param htmlPage: name of the .html file you wish

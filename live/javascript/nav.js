@@ -1,7 +1,6 @@
 // Hamburger Menu Click event Handler
 $('#menu-btn').click(function(){
     $('#side-nav').toggleClass('open');
-    toggleOverlay();
 });
 
 // Set Active state of Side Nav Items
@@ -31,8 +30,8 @@ $('#overlay').click(function()
 
 // Skills Click Function
 $('#work-history').click( function(){
-	setMainDivContent('Work History');
-	setPageHeader('work-history');
+	setMainDivContent('work-history');
+	setPageHeader('Work History');
     goToTopOfPage();
 });
 
