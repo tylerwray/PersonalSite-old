@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	// Load 'home.html' initially for the user in div id="main"
-	setMainDivContent('profile');
+	setMainDivContent('profile.html');
 });
 
 // param htmlPage: name of the .html file you wish
 // to load into the 'main' container (subtract the extension: example not example.html)
 function setMainDivContent(htmlPage)
 {
-	$('#main').load(htmlPage);
+	$('#main').load('live/html/' + htmlPage);
 }
 
 function setPageHeader(newHeaderName)
