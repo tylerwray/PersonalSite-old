@@ -1,7 +1,7 @@
 .navbar
 	border-radius: 0px
 	background-color: $primary
-	z-index: $lowest + 2
+	z-index: $highest
 	animation: $fade-in
 	box-shadow: 0px 3px 15px 5px $shadow
 
@@ -23,11 +23,12 @@
 
 #side-nav
 	margin-left: -250px
+	margin-top: 50px
 	display: block
 	height: 100%
 	width: 200px
-	background-color: #757575
-	z-index: $highest
+	background-color: white
+	z-index: $highest - 1
 	position: fixed
 	top: 0px
 	transition: $standard-transition
@@ -39,24 +40,27 @@
 		margin-left: 0px
 
 .side-nav-icon
-	color: white
+	color: $gray
 	font-size: 18px
 	padding-right: 10px
 	transform: translateY(2px)
-
-.side-nav-header-icon
-	color: white
-	font-size: 45px
 
 .side-nav-item
 	padding: 10px
 	font-size: 14px
 	float: right
-	color: white
+	color: $gray
 
 	&:hover
 		cursor: pointer
-		background: $shadow
+		background: lighten($gray, 10%)
+		color: white
+
+		& > i
+			color: white
+
+	&.active
+		color: white
 
 .side-nav-item-lower
 	@extend .side-nav-item
@@ -65,7 +69,6 @@
 #side-nav-header
 	background-color: $secondary
 	box-shadow: 0px 3px 10px 0px $shadow
-	z-index: $highest
 
 	&:hover
 		cursor: pointer

@@ -5,3 +5,30 @@ body
 	margin-top: 100px
 	min-height: 700px
 	z-index: $lowest
+
+#overlay
+	transition: $standard-transition
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0)
+	z-index: $middle + 1
+
+	&.open
+		visibility: visible
+		transition: $standard-transition
+		background-color: rgba(0, 0, 0, 0.4)
+
+#fab-overlay
+	@extend #overlay
+	z-index: $middle - 1
+	background-color: rgba(0, 0, 0, 0)
+	transition: $standard-transition
+
+	&.open
+		background-color: rgba(255, 255, 255, 0.82)

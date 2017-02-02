@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
+		<link href="assets/images/favicon/favicon.ico" rel="icon" type="image/x-icon" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Fira+Sans" rel="stylesheet" />
 		<link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="live/css/stylesheet.css" />
@@ -11,7 +12,6 @@
 
 	<body>
 		<div id="side-nav" class="container-fluid">
-			<div id="side-nav-header" class="col-xs-12 text-center"><i class="material-icons side-nav-header-icon">close</i></div>
 			<div data-header="Profile" data-file="profile" class="col-xs-12 side-nav-item active"><i class="material-icons side-nav-icon">person</i>Profile</div>
 			<div data-header="Work History" data-file="work-history" class="col-xs-12 side-nav-item"><i class="material-icons side-nav-icon">work</i>Work History</div>
 		</div>
@@ -47,16 +47,16 @@
 
 		<div class="fab-holder">
 			<label for="fab-2" id="lbl-2">Call me</label>
-			<div id="fab-2">
+			<div id="fab-2" href="tel:8018556510" data-rel="external">
 				<i id="icn-2" class="material-icons">phone</i>
 			</div>
 		</div>
 
 		<div class="fab-holder">
 			<label for="fab-1" id="lbl-1">E-Mail Me</label>
-			<div id="fab-1">
+			<a id="fab-1" href="mailto:wraytw@gmail.com" data-rel="external">
 				<i id="icn-1" class="material-icons">mail</i>
-			</div>
+			</a>
 		</div>
 
 		<div id="fab" class="fab-main">

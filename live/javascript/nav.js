@@ -12,8 +12,8 @@ $('.side-nav-item').click(function()
     $('#side-nav').toggleClass('open');
 	setMainDivContent($(this).attr('data-file'));
 	setPageHeader($(this).attr('data-header'));
+	resetPageVisibility();
 	goToTopOfPage();
-	toggleOverlay();
 });
 
 // Closes Side Nav Bar
