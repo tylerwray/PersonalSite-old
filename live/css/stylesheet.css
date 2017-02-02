@@ -23,9 +23,8 @@
 
 .active {
   color: white;
-  background-color: #424242; }
-  .active > a, .active i {
-    color: white; }
+  background-color: #424242;
+  color: white; }
 
 a:link {
   text-decoration: none;
@@ -374,6 +373,10 @@ body {
 
 #space-card > .card-header {
   background-image: url("/assets/images/bluemarble.jpg"); }
+
+#info-card-row {
+  margin-right: 0;
+  margin-left: 0; }
 
 @media screen and (max-width: 1150px) {
   #info-cards {
