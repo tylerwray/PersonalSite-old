@@ -7,8 +7,7 @@ $(document).ready(function(){
 // to load into the 'main' container (subtract the extension: example not example.html)
 function setMainDivContent(htmlPage)
 {
-	var fullFilePath = 'live/html/' + htmlPage + '.html';
-	$('#main').load(fullFilePath);
+	$('#main').load(htmlPage);
 }
 
 function setPageHeader(newHeaderName)

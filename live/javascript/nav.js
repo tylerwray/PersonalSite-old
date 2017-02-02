@@ -1,7 +1,11 @@
 // Hamburger Menu Click event Handler
-$('#menu-btn').click(function(){
+$('#menu-btn').click(function()
+{
     $('#side-nav').toggleClass('open');
+	$('.navbar').css('z-index', 100);
+	$('#side-nav').css('z-index', 99);
 	toggleOverlay();
+	toggleOverflow();
 });
 
 // Set Active state of Side Nav Items
@@ -16,16 +20,10 @@ $('.side-nav-item').click(function()
 	goToTopOfPage();
 });
 
-// Closes Side Nav Bar
-$('#side-nav-header').click(function()
-{
-	$('#side-nav').toggleClass('open');
-	toggleOverlay();
-});
-
 // Closes overlay
 $('#overlay').click(function()
 {
 	$('#side-nav').toggleClass('open');
+	toggleOverflow();
 	toggleOverlay();
 });

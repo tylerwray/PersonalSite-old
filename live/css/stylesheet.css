@@ -23,8 +23,7 @@
 
 .active {
   color: white;
-  background-color: #424242;
-  color: white; }
+  background-color: #424242; }
 
 a:link {
   text-decoration: none;
@@ -51,7 +50,7 @@ body {
   min-height: 700px;
   z-index: 0; }
 
-#overlay, #fab-overlay {
+#overlay {
   transition: all 325ms ease-in-out;
   visibility: hidden;
   position: fixed;
@@ -62,25 +61,18 @@ body {
   width: 100%;
   height: 100%;
   background-color: transparent;
-  z-index: 6; }
-  #overlay.open, .open#fab-overlay {
+  z-index: 8; }
+  #overlay.open {
     visibility: visible;
     transition: all 325ms ease-in-out;
     background-color: rgba(0, 0, 0, 0.4); }
-
-#fab-overlay {
-  z-index: 4;
-  background-color: transparent;
-  transition: all 325ms ease-in-out; }
-  #fab-overlay.open {
-    background-color: rgba(255, 255, 255, 0.82); }
 
 .navbar {
   border-radius: 0px;
   background-color: #039be5;
   z-index: 10;
-  animation: fade-in 600ms ease-in-out 0s 1 normal forwards running;
-  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
+  animation: fade-in 600ms ease-in-out 0s 1 normal forwards running; }
 
 #menu-btn {
   color: white;
@@ -93,9 +85,6 @@ body {
   font-size: 30px;
   margin-left: -50px;
   color: white; }
-  @media screen and (max-width: 480px) {
-    #name {
-      display: none; } }
 
 #side-nav {
   margin-left: -250px;
@@ -133,6 +122,8 @@ body {
       color: white; }
   .side-nav-item.active, .active.side-nav-item-lower {
     color: white; }
+    .side-nav-item.active > i, .active.side-nav-item-lower > i {
+      color: white; }
 
 #side-nav-header {
   background-color: #e51603;
