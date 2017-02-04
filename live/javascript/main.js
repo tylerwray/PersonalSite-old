@@ -16,15 +16,24 @@ $(document).ready(function()
 
 function setActiveMenuItem()
 {
-	localStorage.setItem('activeMenuItem',$('.side-nav-item.active').attr('id'));
+	try
+	{
+		localStorage.setItem('activeMenuItem',$('.side-nav-item.active').attr('id'));
+	} catch (e) {
+		return false;
+	}
 }
-
 function getActiveMenuItem()
 {
-	if (localStorage.getItem('activeMenuItem') == null)
+	try
+	{
+		if (localStorage.getItem('activeMenuItem') == null)
+			return 'nav-profile';
+		else
+			return localStorage.getItem('activeMenuItem');
+	} catch (e) {
 		return 'nav-profile';
-	else
-		return localStorage.getItem('activeMenuItem');
+	}
 }
 // param htmlPage: name of the .html file you wish
 // to load into the 'main' container (subtract the extension: example not example.html)
@@ -39,7 +48,8 @@ function setPageHeader(newHeaderName)
 }
 
 // Closes all menu items,
-function resetPageVisibility() {
+function resetPageVisibility()
+{
     $('#fab').removeClass('open');
     $('#fab-1').removeClass('open');
     $('#fab-2').removeClass('open');
@@ -53,11 +63,13 @@ function resetPageVisibility() {
 	toggleOverflow();
 }
 
-function toggleOverflow() {
+function toggleOverflow()
+{
 	$('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
 }
 
-function toggleOverlay() {
+function toggleOverlay()
+{
     $('#overlay').toggleClass('open');
 }
 
