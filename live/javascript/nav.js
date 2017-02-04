@@ -4,6 +4,7 @@ $('#menu-btn').click(function()
     $('#side-nav').toggleClass('open');
 	$('.navbar').css('z-index', 100);
 	$('#side-nav').css('z-index', 99);
+	$(this).toggleClass('open');
 	toggleOverlay();
 	toggleOverflow();
 });
@@ -19,6 +20,7 @@ $('.side-nav-item').click(function()
 	setActiveMenuItem();
 
 	// Reset the page view
+	$('#menu-btn').removeClass('open');
 	$('#side-nav').toggleClass('open');
 	setMainDivContent($(this).attr('data-file'));
 	setPageHeader($(this).attr('data-header'));
