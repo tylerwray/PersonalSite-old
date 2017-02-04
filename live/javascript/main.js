@@ -1,8 +1,31 @@
-$(document).ready(function(){
-	// Load 'home.html' initially for the user in div id="main"
-	setMainDivContent('profile.html');
+$(document).ready(function()
+{
+	// read Page ID from Local Storage
+	var activeMenuItem = '#' + getActiveMenuItem();
+
+	// Variables for loading current page
+	var fileName = $(activeMenuItem).attr('data-file');
+	var headerName = $(activeMenuItem).attr('data-header');
+
+	// Functions to set that Current Page data
+	$('.side-nav-item').removeClass('active');
+	$(activeMenuItem).toggleClass('active');
+	setMainDivContent(fileName);
+	setPageHeader(headerName);
 });
 
+function setActiveMenuItem()
+{
+	localStorage.setItem('activeMenuItem',$('.side-nav-item.active').attr('id'));
+}
+
+function getActiveMenuItem()
+{
+	if (localStorage.getItem('activeMenuItem') == null)
+		return 'nav-profile';
+	else
+		return localStorage.getItem('activeMenuItem');
+}
 // param htmlPage: name of the .html file you wish
 // to load into the 'main' container (subtract the extension: example not example.html)
 function setMainDivContent(htmlPage)
