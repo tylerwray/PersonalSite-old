@@ -1,3 +1,4 @@
 .DS_Store
-live/css/stylesheet.css.map
+live/css/.sass-cache/*
 live/css/.sass-cache
+live/css/*.css.map
