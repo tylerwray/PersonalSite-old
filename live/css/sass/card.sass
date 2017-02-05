@@ -52,7 +52,7 @@
 
 #card-popup-overlay
 	position: fixed
-	z-index: $modal
+	z-index: $modal - 1
 	top: 0
 	bottom: 0
 	left: 0
@@ -66,16 +66,27 @@
 	visibility: visible
 	opacity: 1
 
-
 #card-popup
 	margin: 70px auto
 	padding: 20px
 	background: #fff
+	min-height: 300px
 	border-radius: 5px
 	width: 30%
-	position: relative
-	transition: all 5s ease-in-out
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: $modal
+	visibility: hidden
+	opacity: 0
+	transition: $standard-transition
 
+	&.open
+		visibility: visible
+		z-index: $modal
+		opacity: 1
 
 #card-popup-header
 	margin-top: 0
@@ -96,6 +107,15 @@
 	color: $dark-blue
 	cursor: pointer
 
-#card-popup #card-popup-content
-	max-height: 30%
+#card-popup-content
+	max-height: 90%
+	padding: 10px
 	overflow: auto
+
+@media screen and (max-width: 1000px)
+	#card-popup
+		width: 60%
+
+@media screen and (max-width: 500px)
+	#card-popup
+		width: 90%
