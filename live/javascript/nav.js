@@ -2,8 +2,6 @@
 $('#menu-btn').click(function()
 {
     $('#side-nav').toggleClass('open');
-	$('.navbar').css('z-index', 100);
-	$('#side-nav').css('z-index', 99);
 	$(this).toggleClass('open');
 	toggleOverlay();
 	toggleOverflow();

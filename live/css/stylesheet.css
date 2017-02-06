@@ -6,17 +6,7 @@
     transform: translateY(0px);
     opacity: 1w; } }
 * {
-  font-family: Arial, Tahoma, serif; }
-
-.hr {
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
-  padding: 0.5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto; }
+  font-family: "Roboto", Arial, Tahoma, serif; }
 
 a:link {
   text-decoration: none;
@@ -62,7 +52,7 @@ body {
 
 .navbar {
   border-radius: 0px;
-  background-color: #2196F3;
+  background-color: #455A64;
   z-index: 10;
   box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
   animation: fade-in 600ms ease-in-out 0s 1 normal forwards running;
@@ -103,12 +93,12 @@ body {
   color: #494949; }
   .side-nav-item:hover {
     cursor: pointer;
-    background-color: #ebebeb; }
+    background-color: #f2f2f2; }
   .side-nav-item.active {
-    color: #0c7cd5;
-    background-color: #ebebeb; }
+    color: #009688;
+    background-color: #f2f2f2; }
     .side-nav-item.active > i {
-      color: #0c7cd5; }
+      color: #009688; }
 
 #menu-btn {
   width: 30px;
@@ -124,7 +114,7 @@ body {
     position: absolute;
     height: 2px;
     width: 100%;
-    background: white;
+    background-color: white;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -188,7 +178,7 @@ body {
   right: 10px;
   bottom: 10px;
   z-index: 5;
-  background-color: #F44336;
+  background-color: #009688;
   transition: all 150ms ease-in-out;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
   #fab > i {
@@ -214,7 +204,7 @@ body {
   right: 16px;
   bottom: 10px;
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: #1E88E5;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
   transition: all 150ms ease-in-out;
   transition-delay: 0s;
@@ -232,7 +222,7 @@ body {
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
 
 #fab-2, #fab-3 {
-  background-color: #43A047;
+  background-color: #4CAF50;
   bottom: 10px;
   transition-delay: 0.05s; }
   #fab-2.open, .open#fab-3 {
@@ -329,7 +319,7 @@ body {
   margin-bottom: 5px;
   font-size: 13px;
   padding: 5px;
-  color: purple; }
+  color: #009688; }
   .card-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: all 200ms ease-in;
@@ -341,13 +331,15 @@ body {
   height: 180px; }
 
 .card-title {
-  margin: 10px; }
+  margin: 10px;
+  color: #212121; }
 
 .card-text {
   margin-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
-  height: 100px; }
+  height: 100px;
+  color: #757575; }
 
 #card-popup-overlay {
   position: fixed;
@@ -371,7 +363,7 @@ body {
   background: #fff;
   min-height: 300px;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -402,7 +394,7 @@ body {
   color: #333; }
 
 #card-popup #card-popup-close-button:hover {
-  color: #0c7cd5;
+  color: #009688;
   cursor: pointer; }
 
 #card-popup-content {
@@ -424,20 +416,38 @@ body {
   padding: 10px;
   margin: 50px auto;
   background-color: white; }
+  #photo-desc > .hr {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    padding: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+  #photo-desc > p {
+    width: 90%;
+    margin: 0 auto;
+    color: #757575;
+    line-height: 20px; }
+    #photo-desc > p > strong {
+      color: #009688;
+      font-size: 16px;
+      line-height: 40px; }
 
 #profile-photo {
   height: 300px;
   border: 0px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  background-color: #d0d0d0; }
+  background-color: #009688; }
 
 #info-cards {
   max-width: 1150px;
   margin: 0 auto; }
 
 #info-card-holder {
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: #CFD8DC; }
 
 #football-card > .card-header {
   background-image: url("/assets/images/football.jpg");
@@ -449,7 +459,7 @@ body {
 
 #technology-card > .card-header {
   background-image: url("https://images-goldenfrog.netdna-ssl.com/vyprvpn/mac/banner_mac.png");
-  background-color: rgba(15, 50, 70, 0.6);
+  background-color: #969696;
   background-position: center;
   background-size: 70%;
   background-repeat: no-repeat; }
@@ -513,7 +523,7 @@ body {
   background-color: #FFD600; }
 
 #job5, #job6 {
-  background-color: #43A047; }
+  background-color: #4CAF50; }
 
 #job6 {
   background-color: #FF4081; }

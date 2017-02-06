@@ -1,15 +1,28 @@
 // Main colors of site
-$blue: #2196F3
-$red: #F44336
-$green: #43A047
-$dark-white: darken(white, 8%)
-$dark-blue: darken($blue, 10%)
+$primary: #607D8B
+$primary-light: #CFD8DC
+$primary-mid: #90A4AE
+$primary-dark: #455A64
+$accent: #009688
+$primary-text-color: #FFFFFF
+$primary-text: #212121
+$secondary-text: #757575
+
+// Colors to support main colors
+$green: #4CAF50
+$blue: #1E88E5
+$gray: rgb(73, 73, 73)
+$white: white
+$dark-white: darken(white, 5%)
+$black: black
+$light-black: lighten(black, 10%)
+$dark-gray: darken($gray, 5%)
+$divider: #BDBDBD
+$shadow: rgba(0, 0, 0, 0.3)
 
 // CSS standard function sets
 $standard-transition: all 325ms ease-in-out
 $fast-transition: all 150ms ease-in-out
-$shadow: rgba(0, 0, 0, 0.3)
-$gray: rgb(73, 73, 73)
 
 // Z-Index properties
 $lowest: 0
@@ -29,17 +42,7 @@ $fade-in: fade-in 600ms ease-in-out 0s 1 normal forwards running
 		opacity: 1w
 
 *
-	font-family: Arial, Tahoma, serif
-
-.hr
-	background-color: $shadow
-	box-shadow: 0px 0px 1px $shadow
-	padding: 0.5px
-	margin-top: 10px
-	margin-bottom: 10px
-	width: 85%
-	margin-left: auto
-	margin-right: auto
+	font-family: 'Roboto', Arial, Tahoma, serif
 
 a:link
 	text-decoration: none
