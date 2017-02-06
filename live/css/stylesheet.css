@@ -26,6 +26,7 @@ a:active {
   padding: 0px; }
 
 body {
+  position: relative;
   background-color: rgba(204, 204, 204, 0.3); }
 
 #main {
