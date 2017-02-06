@@ -20,7 +20,7 @@ $('.side-nav-item').click(function()
 	// Reset the page view
 	$('#menu-btn').removeClass('open');
 	$('#side-nav').toggleClass('open');
-	setMainDivContent($(this).attr('data-file'));
+	setMainDivContent('live/html/' + $(this).attr('data-file'));
 	setPageHeader($(this).attr('data-header'));
 	resetPageVisibility();
 	goToTopOfPage();

@@ -1,3 +1,6 @@
+/**
+ * Main Document Ready function sets up the page for the user
+ */
 $(document).ready(function()
 {
 	// read Page ID from Local Storage
@@ -10,10 +13,15 @@ $(document).ready(function()
 	// Functions to set that Current Page data
 	$('.side-nav-item').removeClass('active');
 	$(activeMenuItem).toggleClass('active');
-	setMainDivContent(fileName);
+	setMainDivContent('live/html/' + fileName);
 	setPageHeader(headerName);
 });
 
+/**
+ * Sets the current active menu item everytime it is
+ set so that it can be loaded when the user
+ reloads the browser
+ */
 function setActiveMenuItem()
 {
 	try
@@ -23,6 +31,11 @@ function setActiveMenuItem()
 		return false;
 	}
 }
+
+/**
+ * Gets the Active menu item saved in localStorage
+ * @return {String} Saved Active Menu Item
+ */
 function getActiveMenuItem()
 {
 	try
@@ -35,19 +48,29 @@ function getActiveMenuItem()
 		return 'nav-profile';
 	}
 }
-// param htmlPage: name of the .html file you wish
-// to load into the 'main' container (subtract the extension: example not example.html)
+
+/**
+ * Sets the display in the main div of the page
+ * @param {String} htmlPage
+ */
 function setMainDivContent(htmlPage)
 {
-	$('#main').load('live/html/' + htmlPage);
+	$('#main').load(htmlPage);
 }
 
+/**
+ * Sets the page header in the navbar
+ * @param {String} newHeaderName
+ */
 function setPageHeader(newHeaderName)
 {
 	$('#name').html(newHeaderName);
 }
 
-// Closes all menu items,
+/**
+ * Resets the Page visibility after an
+ appropriate event
+ */
 function resetPageVisibility()
 {
     $('#fab').removeClass('open');
@@ -63,16 +86,26 @@ function resetPageVisibility()
 	toggleOverflow();
 }
 
+/**
+ * Toggles the overflow of the body and html elements
+ */
 function toggleOverflow()
 {
 	$('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
+	$('html').css('overflow') == 'hidden' ? $('html').css('overflow', 'auto') : $('html').css('overflow', 'hidden');
 }
 
+/**
+ * Toggles the Dark overlay for popup and other UI events
+ */
 function toggleOverlay()
 {
     $('#overlay').toggleClass('open');
 }
 
+/**
+ * Sends the browser to the top of the page
+ */
 function goToTopOfPage()
 {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
