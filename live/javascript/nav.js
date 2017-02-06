@@ -30,6 +30,7 @@ $('.side-nav-item').click(function()
 $('#overlay').click(function()
 {
 	$('#side-nav').toggleClass('open');
+	$('#menu-btn').toggleClass('open');
 	toggleOverflow();
 	toggleOverlay();
 });
