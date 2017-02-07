@@ -53,6 +53,21 @@
 	background-image: url('/assets/images/my_family.jpg')
 	background-position: 50% 40%
 
+.popupImage
+	background-position: center
+	background-size: cover
+	display: inline-block
+	width: 200px
+	height: 200px
+
+#ash_lyla
+	@extend .popupImage
+	background-image: url('/assets/images/ash_lyla.jpg')
+
+#lyla_cookie
+	@extend .popupImage
+	background-image: url('/assets/images/lyla.jpg')
+
 #technology-card > .card-header
 	background-image: url('/assets/images/computer-chip.jpg')
 	background-color: lighten($gray, 30%)
@@ -73,4 +88,4 @@
 
 @media screen and (max-width: 500px)
 	*
-		font-size: 12px
+		font-size: 13px

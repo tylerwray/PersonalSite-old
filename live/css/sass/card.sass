@@ -70,17 +70,16 @@
 
 #card-popup
 	margin: 70px auto
-	padding: 20px
 	background: #fff
 	min-height: 300px
-	border-radius: 5px
+	border-radius: 2px
 	width: 50%
 	position: fixed
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
-	z-index: $modal
+	z-index: 0
 	visibility: hidden
 	opacity: 0
 	transition: $standard-transition
@@ -91,33 +90,45 @@
 		opacity: 1
 
 #card-popup-header
-	margin-top: 0
-	color: #333
-	font-family: Tahoma, Arial, sans-serif
+	box-shadow: 0px 3px 15px 5px $shadow
+	background-color: $primary-light
+	position: relative
+	z-index: $modal + 1
+
+#card-popup-header-content
+	font-size: 24px
+	padding: 10px
 
 #card-popup-close-button
-	position: absolute
-	top: 20px
-	right: 30px
 	transition: all 200ms
 	font-size: 30px
 	font-weight: bold
 	text-decoration: none
 	color: #333
+	position: absolute
+	right: 15px
+	top: 5px
 
 #card-popup #card-popup-close-button:hover
 	color: $accent
 	cursor: pointer
 
 #card-popup-content
-	max-height: 90%
-	padding: 10px
+	max-height: 80%
+	padding: 20px
 	overflow: auto
+	text-align: center
 
 @media screen and (max-width: 1000px)
 	#card-popup
 		width: 60%
 
+	#card-popup-content
+		max-height: 80%
+
 @media screen and (max-width: 500px)
 	#card-popup
 		width: 90%
+
+	#card-popup-content
+		max-height: 80%

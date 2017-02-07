@@ -7,7 +7,7 @@
  */
 function popup(header, message, file)
 {
-	$('#card-popup-header').html(header);
+	$('#card-popup-header-content').html(header);
 	$('#card-popup-overlay').addClass('open');
 	$('#card-popup').addClass('open');
 

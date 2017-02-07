@@ -176,8 +176,8 @@ body {
   padding: 10px;
   border-radius: 50%;
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 18px;
+  bottom: 18px;
   z-index: 5;
   background-color: #009688;
   transition: all 150ms ease-in-out;
@@ -202,7 +202,7 @@ body {
   width: 46px;
   height: 46px;
   position: fixed;
-  right: 16px;
+  right: 24px;
   bottom: 10px;
   border-radius: 50%;
   background-color: #1E88E5;
@@ -360,17 +360,16 @@ body {
 
 #card-popup {
   margin: 70px auto;
-  padding: 20px;
   background: #fff;
   min-height: 300px;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 50%;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 0;
   visibility: hidden;
   opacity: 0;
   transition: all 325ms ease-in-out; }
@@ -380,35 +379,47 @@ body {
     opacity: 1; }
 
 #card-popup-header {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif; }
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
+  background-color: #CFD8DC;
+  position: relative;
+  z-index: 101; }
+
+#card-popup-header-content {
+  font-size: 24px;
+  padding: 10px; }
 
 #card-popup-close-button {
-  position: absolute;
-  top: 20px;
-  right: 30px;
   transition: all 200ms;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333; }
+  color: #333;
+  position: absolute;
+  right: 15px;
+  top: 5px; }
 
 #card-popup #card-popup-close-button:hover {
   color: #009688;
   cursor: pointer; }
 
 #card-popup-content {
-  max-height: 90%;
-  padding: 10px;
-  overflow: auto; }
+  max-height: 80%;
+  padding: 20px;
+  overflow: auto;
+  text-align: center; }
 
 @media screen and (max-width: 1000px) {
   #card-popup {
-    width: 60%; } }
+    width: 60%; }
+
+  #card-popup-content {
+    max-height: 80%; } }
 @media screen and (max-width: 500px) {
   #card-popup {
-    width: 90%; } }
+    width: 90%; }
+
+  #card-popup-content {
+    max-height: 80%; } }
 #person-info {
   margin-bottom: 20px; }
 
@@ -458,6 +469,19 @@ body {
   background-image: url("/assets/images/my_family.jpg");
   background-position: 50% 40%; }
 
+.popupImage, #ash_lyla, #lyla_cookie {
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  width: 200px;
+  height: 200px; }
+
+#ash_lyla {
+  background-image: url("/assets/images/ash_lyla.jpg"); }
+
+#lyla_cookie {
+  background-image: url("/assets/images/lyla.jpg"); }
+
 #technology-card > .card-header {
   background-image: url("/assets/images/computer-chip.jpg");
   background-color: #969696;
@@ -476,7 +500,7 @@ body {
     margin: 0 10px; } }
 @media screen and (max-width: 500px) {
   * {
-    font-size: 12px; } }
+    font-size: 13px; } }
 .jobCircle {
   border-radius: 50%;
   height: 300px;
