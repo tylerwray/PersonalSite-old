@@ -93,6 +93,7 @@ function toggleOverflow()
 {
 	$('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
 	$('html').css('overflow') == 'hidden' ? $('html').css('overflow', 'auto') : $('html').css('overflow', 'hidden');
+	$('#main').css('overflow') == 'hidden' ? $('#main').css('overflow', 'auto') : $('#main').css('overflow', 'hidden');
 }
 
 /**
