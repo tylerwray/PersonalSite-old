@@ -1,1 +1,1 @@
-sass --watch /Users/tylerwray/Projects/material_resume/live/css/sass/stylesheet.sass:/Users/tylerwray/Projects/material_resume/live/css/stylesheet.css
+sass --watch /Users/tylerwray/Projects/PersonalSite/live/css/sass/stylesheet.sass:/Users/tylerwray/Projects/PersonalSite/live/css/stylesheet.css
