@@ -1,0 +1,5 @@
+tylerjwray.com
+
+root /srv/www/PersonalSite
+
+git https://github.com/wraytw/PersonalSite.git

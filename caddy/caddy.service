@@ -1,0 +1,13 @@
+[Unit]
+Description=Caddy HTTP/2 web server %I
+Documentation=https://caddyserver.com/docs
+After=network.target
+
+[Service]
+User=%i
+Environment=STNORESTART=yes
+ExecStart=/usr/bin/caddy -agree -email wraytw@gmail.com -conf=/srv/www/PersonalSite/CaddyFile
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
