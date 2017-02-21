@@ -5,7 +5,7 @@
  * @param {String} file - Pass a full file path to content you want to display.
  						  'message' is overwritten if you pass content here.
  */
-function popup(header, message, file)
+function popup(header, message, file = null)
 {
 	$('#card-popup-header-content').html(header);
 	$('#card-popup-overlay').addClass('open');
