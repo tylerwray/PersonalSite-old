@@ -35,6 +35,9 @@ a:active {
   margin-left: auto;
   margin-right: auto; }
 
+.hidden {
+  display: none; }
+
 body {
   position: relative;
   background-color: #455A64; }
