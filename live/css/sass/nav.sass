@@ -1,6 +1,6 @@
 .navbar
 	border-radius: 0px
-	background-color: #263238
+	background-color: $primary-super-dark
 	z-index: 10
 	box-shadow: 0px 3px 15px 5px $shadow
 	animation: $fade-in
@@ -29,8 +29,8 @@
 		transition: $standard-transition
 		margin-left: 0px
 
-.side-nav-icon
-	color: $gray
+.side-nav-icons
+	color: $dark-gray
 	font-size: 18px
 	padding-right: 10px
 	transform: translateY(2px)
@@ -39,15 +39,15 @@
 	padding: 10px
 	font-size: 14px
 	float: right
-	color: $gray
+	color: $dark-gray
 
 	&:hover
 		cursor: pointer
-		background-color: $dark-white
+		background-color: $light-gray
 
 	&.active
 		color: $accent
-		background-color: $dark-white
+		background-color: $light-gray
 
 		& > i
 			color: $accent

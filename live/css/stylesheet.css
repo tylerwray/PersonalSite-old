@@ -94,8 +94,8 @@ body {
     transition: all 325ms ease-in-out;
     margin-left: 0px; }
 
-.side-nav-icon {
-  color: #494949;
+.side-nav-icons {
+  color: #616161;
   font-size: 18px;
   padding-right: 10px;
   transform: translateY(2px); }
@@ -104,13 +104,13 @@ body {
   padding: 10px;
   font-size: 14px;
   float: right;
-  color: #494949; }
+  color: #616161; }
   .side-nav-item:hover {
     cursor: pointer;
-    background-color: #f2f2f2; }
+    background-color: #EEEEEE; }
   .side-nav-item.active {
     color: #009688;
-    background-color: #f2f2f2; }
+    background-color: #EEEEEE; }
     .side-nav-item.active > i {
       color: #009688; }
 
@@ -157,7 +157,7 @@ body {
   transform: rotate(-45deg); }
 
 .footer {
-  background-color: #3c3c3c;
+  background-color: #263238;
   padding: 5px 20px;
   color: white;
   z-index: 0; }
@@ -355,7 +355,7 @@ body {
   height: 100px;
   color: #757575; }
 
-.popupImage, #ash_lyla, #lyla_cookie {
+.popup-image, #ash_lyla, #lyla_cookie {
   background-position: center;
   background-size: cover;
   display: inline-block;
@@ -403,32 +403,35 @@ body {
 
 #card-popup-header {
   box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
-  background-color: #CFD8DC;
+  background-color: #EEEEEE;
   position: relative;
   z-index: 101; }
 
 #card-popup-header-content {
   font-size: 24px;
-  padding: 10px; }
+  padding: 15px;
+  padding-left: 30px; }
 
 #card-popup-close-button {
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 42px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
   position: absolute;
   right: 15px;
   top: 5px; }
+  #card-popup-close-button > i {
+    font-size: 38px; }
 
 #card-popup #card-popup-close-button:hover {
-  color: #009688;
+  color: #EF5350;
   cursor: pointer; }
 
 #card-popup-content {
-  max-height: 80%;
   padding: 20px;
+  min-height: 100%;
   overflow: auto;
+  color: #757575;
   text-align: center; }
 
 @media screen and (max-width: 1000px) {
@@ -485,7 +488,7 @@ body {
 
 #technology-card > .card-header {
   background-image: url("/assets/images/computer-chip.jpg");
-  background-color: #969696;
+  background-color: #ebebeb;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -558,9 +561,11 @@ body {
   .jobSummary {
     display: none; } }
 #ash_lyla {
-  background-image: url("/assets/images/ash_lyla.jpg"); }
+  background-image: url("/assets/images/ash_lyla.jpg");
+  margin: 20px; }
 
 #lyla_cookie {
-  background-image: url("/assets/images/lyla.jpg"); }
+  background-image: url("/assets/images/lyla.jpg");
+  margin: 20px; }
 
 /*# sourceMappingURL=stylesheet.css.map */
