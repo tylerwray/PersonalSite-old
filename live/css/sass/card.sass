@@ -1,143 +1,143 @@
 .card
-	background-color: white
-	box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.4)
-	transition: all 200ms ease-in
-	padding: 0px
-	padding-bottom: 10px
-	border-radius: 2px
-	margin-bottom: 20px
-	margin-top: 20px
-	max-width: 500px
-	cursor: pointer
+    background-color: white
+    box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.4)
+    transition: all 200ms ease-in
+    padding: 0px
+    padding-bottom: 10px
+    border-radius: 2px
+    margin-bottom: 20px
+    margin-top: 20px
+    max-width: 500px
+    cursor: pointer
 
-	& i
-		font-size: 45px
+    & i
+        font-size: 45px
 
-	&:hover
-		box-shadow: 0px 12px 12px -2px rgba(0,0,0,0.3)
-		transition: all 200ms ease-in
-		cursor: pointer
+    &:hover
+        box-shadow: 0px 12px 12px -2px rgba(0,0,0,0.3)
+        transition: all 200ms ease-in
+        cursor: pointer
 
-		& > .card-button
-			text-decoration: underline
+        & > .card-button
+            text-decoration: underline
 
 .card-button
-	background-color: inherit
-	border: none
-	transition: all 200ms ease-in
-	margin-left: 5px
-	margin-bottom: 5px
-	font-size: 13px
-	padding: 5px
-	color: $accent
+    background-color: inherit
+    border: none
+    transition: all 200ms ease-in
+    margin-left: 5px
+    margin-bottom: 5px
+    font-size: 13px
+    padding: 5px
+    color: $accent
 
-	&:hover
-		background-color: rgba(0, 0, 0, 0.1)
-		transition: all 200ms ease-in
-		border-radius: 2px
+    &:hover
+        background-color: rgba(0, 0, 0, 0.1)
+        transition: all 200ms ease-in
+        border-radius: 2px
 
 .card-header
-	background-position: center
-	background-size: cover
-	height: 180px
+    background-position: center
+    background-size: cover
+    height: 180px
 
 .card-title
-	margin: 10px
-	color: $primary-text
+    margin: 10px
+    color: $primary-text
 
 .card-text
-	margin-top: 5px
-	padding-left: 10px
-	padding-right: 5px
-	height: 100px
-	color: $secondary-text
+    margin-top: 5px
+    padding-left: 10px
+    padding-right: 5px
+    height: 100px
+    color: $secondary-text
 
 .popup-image
-	background-position: center
-	background-size: cover
-	display: inline-block
-	width: 200px
-	height: 200px
-	border-radius: 2px
-	box-shadow: 0px 3px 15px 5px $shadow
+    background-position: center
+    background-size: cover
+    display: inline-block
+    width: 200px
+    height: 200px
+    border-radius: 2px
+    box-shadow: 0px 3px 15px 5px $shadow
 
 #card-popup-overlay
-	position: fixed
-	z-index: $modal - 1
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	background: $shadow
-	transition: $standard-transition
-	visibility: hidden
-	opacity: 0
+    position: fixed
+    z-index: $modal - 1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: $shadow
+    transition: $standard-transition
+    visibility: hidden
+    opacity: 0
 
 #card-popup-overlay.open
-	visibility: visible
-	opacity: 1
+    visibility: visible
+    opacity: 1
 
 #card-popup
-	margin: 70px auto
-	background: #fff
-	min-height: 300px
-	border-radius: 2px
-	width: 50%
-	overflow: hidden
-	position: fixed
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	z-index: 0
-	visibility: hidden
-	opacity: 0
-	transition: $standard-transition
+    margin: 70px auto
+    background: #fff
+    min-height: 300px
+    border-radius: 2px
+    width: 50%
+    overflow: hidden
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 0
+    visibility: hidden
+    opacity: 0
+    transition: $standard-transition
 
-	&.open
-		visibility: visible
-		z-index: $modal
-		opacity: 1
+    &.open
+        visibility: visible
+        z-index: $modal
+        opacity: 1
 
 #card-popup-header
-	position: relative
-	z-index: $modal + 1
+    position: relative
+    z-index: $modal + 1
 
 #card-popup-header-content
-	font-size: 24px
-	padding: 15px
-	padding-left: 30px
+    font-size: 24px
+    padding: 15px
+    padding-left: 30px
 
 #card-popup-close-button
-	transition: all 200ms
-	font-size: 42px
-	font-weight: bold
-	text-decoration: none
-	position: absolute
-	right: 15px
-	bottom: 5px
+    transition: all 200ms
+    font-size: 42px
+    font-weight: bold
+    text-decoration: none
+    position: absolute
+    right: 15px
+    bottom: 5px
 
 #card-popup #card-popup-close-button:hover
-	color: $accent
-	cursor: pointer
+    color: $accent
+    cursor: pointer
 
 #card-popup-content
-	padding: 20px
-	min-height: 100%
-	overflow: auto
-	color: $secondary-text
-	text-align: center
+    padding: 20px
+    min-height: 100%
+    overflow: auto
+    color: $secondary-text
+    text-align: center
 
 @media screen and (max-width: 1000px)
-	#card-popup
-		width: 60%
+    #card-popup
+        width: 60%
 
-	#card-popup-content
-		max-height: 80%
+    #card-popup-content
+        max-height: 80%
 
 @media screen and (max-width: 500px)
-	#card-popup
-		width: 90%
+    #card-popup
+        width: 90%
 
-	#card-popup-content
-		max-height: 80%
+    #card-popup-content
+        max-height: 80%

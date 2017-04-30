@@ -1,20 +1,19 @@
 /**
  * Main Document Ready function sets up the page for the user
  */
-$(document).ready(function()
-{
-	// read Page ID from Local Storage
-	var activeMenuItem = '#' + getActiveMenuItem();
+$(document).ready(function() {
+    // read Page ID from Local Storage
+    var activeMenuItem = '#' + getActiveMenuItem();
 
-	// Variables for loading current page
-	var fileName = $(activeMenuItem).attr('data-file');
-	var headerName = $(activeMenuItem).attr('data-header');
+    // Variables for loading current page
+    var fileName = $(activeMenuItem).attr('data-file');
+    var headerName = $(activeMenuItem).attr('data-header');
 
-	// Functions to set that Current Page data
-	$('.side-nav-item').removeClass('active');
-	$(activeMenuItem).toggleClass('active');
-	setMainDivContent('live/html/' + fileName);
-	setPageHeader(headerName);
+    // Functions to set that Current Page data
+    $('.side-nav-item').removeClass('active');
+    $(activeMenuItem).toggleClass('active');
+    setMainDivContent('live/html/' + fileName);
+    setPageHeader(headerName);
 });
 
 /**
@@ -24,12 +23,11 @@ $(document).ready(function()
  */
 function setActiveMenuItem()
 {
-	try
-	{
-		localStorage.setItem('activeMenuItem',$('.side-nav-item.active').attr('id'));
-	} catch (e) {
-		return false;
-	}
+    try {
+        localStorage.setItem('activeMenuItem',$('.side-nav-item.active').attr('id'));
+    } catch (e) {
+        return false;
+    }
 }
 
 /**
@@ -38,15 +36,15 @@ function setActiveMenuItem()
  */
 function getActiveMenuItem()
 {
-	try
-	{
-		if (localStorage.getItem('activeMenuItem') == null)
-			return 'nav-profile';
-		else
-			return localStorage.getItem('activeMenuItem');
-	} catch (e) {
-		return 'nav-profile';
-	}
+    try {
+        if (localStorage.getItem('activeMenuItem') == null) {
+            return 'nav-profile';
+        } else {
+            return localStorage.getItem('activeMenuItem');
+        }
+    } catch (e) {
+        return 'nav-profile';
+    }
 }
 
 /**
@@ -55,7 +53,7 @@ function getActiveMenuItem()
  */
 function setMainDivContent(htmlPage)
 {
-	$('#main').load(htmlPage);
+    $('#main').load(htmlPage);
 }
 
 /**
@@ -64,7 +62,7 @@ function setMainDivContent(htmlPage)
  */
 function setPageHeader(newHeaderName)
 {
-	$('#name').html(newHeaderName);
+    $('#name').html(newHeaderName);
 }
 
 /**
@@ -80,10 +78,10 @@ function resetPageVisibility()
     $('#lbl-1').removeClass('open');
     $('#lbl-2').removeClass('open');
     $('#lbl-3').removeClass('open');
-	$('#overlay').removeClass('open');
-	$('#fab-overlay').removeClass('open');
-	// Toggle body scrollability
-	toggleOverflow();
+    $('#overlay').removeClass('open');
+    $('#fab-overlay').removeClass('open');
+    // Toggle body scrollability
+    toggleOverflow();
 }
 
 /**
@@ -91,9 +89,9 @@ function resetPageVisibility()
  */
 function toggleOverflow()
 {
-	$('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
-	$('html').css('overflow') == 'hidden' ? $('html').css('overflow', 'auto') : $('html').css('overflow', 'hidden');
-	$('#main').css('overflow') == 'hidden' ? $('#main').css('overflow', 'auto') : $('#main').css('overflow', 'hidden');
+    $('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
+    $('html').css('overflow') == 'hidden' ? $('html').css('overflow', 'auto') : $('html').css('overflow', 'hidden');
+    $('#main').css('overflow') == 'hidden' ? $('#main').css('overflow', 'auto') : $('#main').css('overflow', 'hidden');
 }
 
 /**
