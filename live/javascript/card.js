@@ -5,13 +5,13 @@
  * @param {String} file - Pass a full file path to content you want to display.
                           'message' is overwritten if you pass content here.
  */
-function popup(header, message, file = null)
+function popup(header, message, file)
 {
     $('#card-popup-header-content').html(header);
     $('#card-popup-overlay').addClass('open');
     $('#card-popup').addClass('open');
 
-    if (file != null && message == null)
+    if (file !== null && message === null)
     {
         // Ajax call to get the data from the file
         $.get(file, function(data){
@@ -20,6 +20,7 @@ function popup(header, message, file = null)
 
         })
         .fail(function(data){
+            help();
             popup('Failure', 'Cannot Load the content you are trying to display, Please try again later');
         });
     }
@@ -40,4 +41,4 @@ $('#card-popup-close-button, #card-popup-overlay').click(function()
     $('#card-popup').removeClass('open');
 
     toggleOverflow();
-})
+});

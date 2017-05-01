@@ -37,7 +37,7 @@ function setActiveMenuItem()
 function getActiveMenuItem()
 {
     try {
-        if (localStorage.getItem('activeMenuItem') == null) {
+        if (localStorage.getItem('activeMenuItem') === null) {
             return 'nav-profile';
         } else {
             return localStorage.getItem('activeMenuItem');
