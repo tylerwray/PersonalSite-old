@@ -87,11 +87,16 @@ function resetPageVisibility()
 /**
  * Toggles the overflow of the body and html elements
  */
-function toggleOverflow()
-{
-    $('body').css('overflow') == 'hidden' ? $('body').css('overflow', 'auto') : $('body').css('overflow', 'hidden');
-    $('html').css('overflow') == 'hidden' ? $('html').css('overflow', 'auto') : $('html').css('overflow', 'hidden');
-    $('#main').css('overflow') == 'hidden' ? $('#main').css('overflow', 'auto') : $('#main').css('overflow', 'hidden');
+function toggleOverflow() {
+    var overflow_objects = ['body', 'html', '#main'];
+    var element;
+    var assignment;
+
+    for (var i = 0; i <= overflow_objects.length; i++) {
+        element = overflow_objects[i];
+        assignment = $(element).css('overflow') == 'hidden' ? 'auto' : 'hidden';
+        $(element).css('overflow', assignment);
+    }
 }
 
 /**
