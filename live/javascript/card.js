@@ -20,7 +20,6 @@ function popup(header, message, file)
 
         })
         .fail(function(data){
-            help();
             popup('Failure', 'Cannot Load the content you are trying to display, Please try again later');
         });
     }
